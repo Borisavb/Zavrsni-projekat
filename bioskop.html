@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Beogradski bioskopi</title>
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta author="Borisav Bogdanovic">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
+
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white"
+                        href="http://klikapartmani.com/bioskopi-beograd-lokacije-informacije/"
+                        target="_blank">Bioskopi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="https://www.fest.rs/Naslovna" target="_blank">FEST 2019</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="http://www.magnificent7festival.org/index.php"
+                        target="_blank">Veličanstvenih 7</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Repertoar</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="https://www.cineplexx.rs/filmovi/repertoar/?center=614"
+                            target="_blank">Cineplexx</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" target="_blank"
+                            href="http://www.kinoteka.org.rs/repertoar-programi">Jugoslovenska kinoteka</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" target="_blank" href="http://cinegrand-mcf.rs/na-repertoaru-danas">Cine
+                            Grand</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" style="right: 0;">
+                    <a class="nav-link text-white" href="#About" target="_blank">O nama</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- <div id="naslov">
+            <h1 class="text-center font-weight-bold">Vodič kroz Beogradske bioskope</h1>
+        </div> -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4 text-center font-weight-bold">Vodič kroz Beogradske bioskope</h1>
+        </div>
+    </div>
+    <section id="karusel" class="position-relative">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/bio/aquaman_wide.jpg" class="d-block w-100" alt="Aquaman">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/bio/replicas1024x576.jpg" class="d-block w-100" alt="Replicas">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/bio/ladies-in-black1450x500.jpg" class="d-block w-100" alt="Ladies in Black">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/bio/us1651x702.jpg" class="d-block w-100" alt="us">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/bio/psi870x433.png" class="d-block w-100" alt="Psi umiru sami">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+    </section>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4 text-center font-weight-bold">Aktuelno u beogradskim bioskopima</h1>
+        </div>
+    </div>
+    <div class="media" style="padding-left: 30px; padding-right: 50px;">
+        <img src="img/bio/juzni-vetar.jpg" class="align-self-center mr-3" alt="juzni vetar">
+        <div class="media-body" style="border: 1px solid lightgray; padding: 5px;">
+            <h6 class="mt-0">Film "Južni vetar" uskoro u beogradskim bioskopima</h6>
+            <p></p>
+            <p class="mb-0">U životu Petra Maraša, pripadnika beogradske automobilske mafije, stvari počinju da dobijaju
+                smisao. Napušta roditeljski dom i sa dugogodišnjom devojkom Sofijom se useljava u svoj novi stan. Klan
+                čiji je pripadnik, a kojim upravlja iskusni „Car“, dobro „radi“. Posao je uigran, novca ima dovoljno za
+                sve, a policija im ne pravi probleme. Sve će se to promeniti kada se Maraš slučajno zameri brutalnom
+                narko klanu.
+                Fantastičnu glumačku ekipu čine Miloš Biković, Miodrag Radonjić, Dragan Bjelogrlić, Nebojša Glogovac,
+                Miloš Timotijević, Jovana Stojiljković, Srđan Todorović, Bogdan Diklić, Aleksandar Berček, Hristo Šopov,
+                Ivajlo Zaharijev.
+                Cena ulaznice je 350 dinara. Više informacija i rezervacije na telefon: 011/5557-501.</p>
+        </div>
+    </div>
+    <br>
+    <div class="media" style="padding-left: 30px; padding-right: 50px;">
+        <div class="media-body" style="border: 1px solid lightgray; padding: 5px;">
+            <h5 class="mt-0 mb-1">ROĐENDAN BIOSKOPA CINEPLEXX – VELIKO SNIŽENJE ULAZNICA</h5>
+            Povodom proslave svog rođendana bioskop Cineplexx je danas snizio cene karata i prodavaće se u bioskopima u
+            Delta City-u, Ušće Shoping Centeru i Big Fashion-u, a repertoar će biti raznovrstan i namenjen svim
+            uzrastima. Karte se mogu kupiti po ceni od 300 dinara.
+            Najmlađi posetioci mogu uživati u animiranom filmu Leo da Vinči: Misija Mona Liza, koji je sinhronizovan na
+            srpski jezik.
+            Takođe prikazaće se aktuelni filmovi kao što su Led sa Milošem Bikovićem, Izdaja sa Alisijom Vikander,
+            Spilbergov film Ready Player One, Bitka za pacifik, Kuća duhova i dr.
+        </div>
+        <img src="img/bio/cineplexx.jpg" class="ml-3" alt="Cineplexx">
+    </div>
+    <br>
+    <div class="media" style="padding-left: 30px; padding-right: 50px;">
+        <img src="img/bio/logo.png" class="align-self-center mr-3" alt="juzni vetar">
+        <div class="media-body" style="border: 1px solid lightgray; padding: 5px;">
+            <h6 class="mt-0">Kako se prijaviti za radionicu?</h6>
+            <p></p>
+            <p class="mb-0">Da biste se prijavili na radionicu, potrebno je da popunite prijavu koja se nalazi na sajtu
+                festivala i pošaljete je najkasnije do 03. aprila 2019. Svi učesnici će biti blagovremeno obavešteni o
+                tome da li su primljeni ili ne. Ako ne dobijte odgovor do 05. maja, pošaljite email na
+                sonja@magnificent7festival.org da proverite da li je vaša prijava stigla.
+
+                Molim vas da tačno upišete svoje kontakt podatke, e-mail kao i broj telefona, kako bismo mogli brzo da
+                vas kontaktiramo u slučaju potencijalnih izmena. Učesnici koji imaju dokazanog iskustva u izradi
+                dokumentarnog filma ili studiraju film, potrebno je da popune samo svoju radnu biografiju. Ostali koji
+                bi voleli da učestvuju, a ne potiču iz sfere filma, pored radne biografije neophodno je da napišu i
+                motivaciono pismo (1000 - 2000 karaktera).</p>
+        </div>
+    </div>
+    <br>
+    <div class="media" style="padding-left: 30px; padding-right: 50px;">
+        <div class="media-body" style="border: 1px solid lightgray; padding: 5px;">
+            <h5 class="mt-0 mb-1">FEST 2019</h5>
+            Prvi FEST, sa podnaslovom "Hrabri novi svet", otvoren je 9. januara 1971. u Domu Sindikata, projekcijom
+            filma "Meš" Roberta Altmana. Zamišljen kao godišnji presek najboljih filmova sezone, beogradski Međunarodni
+            filmski festival FEST izrastao je u jednu od najznačajnijih filmskih smotri i postao jedan od glavnih
+            događaja u kulturnom životu Beograda, uz koga su odrasle mnoge mlade generacije.
+            Ono što ga je krasilo svih proteklih godina jeste činjenica da je bio širom otvoren za sve kinematografije
+            sveta, i za sve relevantne autore, ali i filmove koji se neće naći na bioskopskom repertoaru. Kolika je
+            važnost FEST-a ogleda se i u činjenici da je beogradska publika - sa filmovima nekih od najvećih reditelja
+            današnjice kao što su Teo Angelopulos, Bob Rafelson, Volker Šlendorf, Dejvid Kronenberg, Ken Rasel, Vim
+            Venders, Kišlovski, Hercog... imala priliku da se po prvi put sretne upravo na FEST-u.
+            Do sada - FEST je imao oko četiri miliona gledalaca i skoro 4000 značajnih svetskih filmova - koji su na
+            njemu imali jugoslovensku / srpsku a često i regionalnu premijeru.
+            Iako je prvi FEST održan pre više od 40 godina i ove godine sa istom energijom nastavlja svoj veliki
+            kulturološki i obrazovni zadatak šireći filmske horizonte svim ljubiteljima filmske umetnosti.
+            Još jedna od novina je uvođenje nagrade Beogradski pobednik za izuzetan doprinos filmskoj umetnosti, kao i
+            Beogradski pobednik za dosadašnje stvaralaštvo.
+        </div>
+        <img src="img/bio/fest2019.jpg" class="align-self-center ml-3" alt="Cineplexx">
+    </div>
+    <br>
+    <div class="media" style="padding-left: 30px; padding-right: 50px;">
+        <img src="img/bio/akademija-28.jpg" class="align-self-center mr-3" alt="juzni vetar">
+        <div class="media-body" style="border: 1px solid lightgray; padding: 5px;">
+            <h6 class="mt-0">Akademija 28 - nemanjina 28, Beograd</h6>
+            <p></p>
+            <p class="mb-0">Akademija 28 bioskop u Beogradu nalazi se na uglu Nemanjine i ulice Svetozara Markovića,
+                naspram parka Manjež u samom centru grada, nadomak trga Slavija. Akademija 28 nije samo bioskop već i
+                klub, galerija i pozorišna scena, i kao takav predstavlja jedno od kultnih mesta u Beogradu. Akademija
+                28 osnovana je 1991. godine kao deo poslovnog sistema Djuro Salaj. Oduvek je bila orijentisana ka
+                kulturi i umetnosti negujući više oblika umetničkih delatnosti. Bioskop Akademija 28 nalazi se u Cinema
+                cafe-u, svojevrsnoj bioskopskoj hali koja naliči kafiću, gde publika duboko uvaljena u udobne fotelje
+                može pratiti aktuelne filmske hitove uz piće. Biletarnica bioskopa Akademija 28 nalazi se na istoj
+                adresi gde i bioskop, a njeno radno vreme je od 12 časova do 20:30 časova radnim danima, a vikendom,
+                ukoliko ima projekcije, sat vremena pre početka projekcije. Pored bioskopske sale Cinema Cafe u
+                Akademiji 28 postoji i bioskopska i pozorisna sala sa ukupno 380 mesta. A Akademija 28 kao kulturni
+                centar dom je i drugih manifestacija kao što su anualni “Rodjendan džeza”, galerija i izložbeni prostor
+                kulturnog amaterskog likovnog društva “Djuro Salaj” i kafića Cinema cafe gde se dešavaju mnogbrojni
+                koncerti kako naših popularnih bendova tako i stranih. </p>
+        </div>
+    </div>
+    <br>
+    <div class="media" style="padding-left: 30px; padding-right: 50px;">
+        <div class="media-body" style="border: 1px solid lightgray; padding: 5px;">
+            <h5 class="mt-0 mb-1">FESTIVAL SRPSKOG FILMA FANTASTIKE</h5>
+            Dvanaesti Festival srpskog filma fantastike svečano će biti otvoren u četvrtak, 25. oktobra u Studentskom
+            kulturnom centru u 19.00.
+
+            Festival će otvoriti Raško Miljković, reditelj dečje fantastike Zlogonje, sa kojim započinje FSFF. Inače,
+            Raško je prošle godine osvojio nagradu „Koskar“ za najbolji scenario za film Kris, a ove godine dolazi sa
+            svojim prvim dugometražnim ostvarenjem.
+
+            „Posebno nas raduje što na ovaj način pratimo kontinuitet u radu mladih autora naklonjenih žanru i nadamo se
+            da ćemo imati priliku da svake godine na festivalu ugostimo po jednog autora koji će nam se vratiti sa
+            celovečernjim ostvarenjem“, rekao je Miroslav Lakobrija, direktor Festivala.
+
+            Kao i uvek, FSFF je pripremio brojna iznenađenja na samom otvaranju, tako da će publiku na početku oduševiti
+            članovi Inex Cirkus Teatra, trupe koja se bavi afirmacijom savremenih cirkuskih veština, performansa i
+            umetničke animacije, kao i brejkdens dvojac Ilija Antić i Aleksandar Marković, svojim nastupima inspirisanim
+            fantastikom.
+
+            Otvaranju će prisustvovati i Ala Safi, počasni gost festivala, glumac, kaskader i producent iz Francuske
+            koji je do sada odigrao preko 40 uloga, glumeći pored imena kao što su Nikolas Kejdž, Tilda Svinton, Majkl
+            Kiton, Vinsent Perez, kao i sa filmskim borilačkim zvezdama – Džekijem Čenom i Skotom Adkinsonom. Safi će
+            svoj rad predstaviti u subotu, 27. oktobra kada će od 20.00 biti prikazani filmovi Point Zero i Pretnja iz
+            svemira (Incoming), fantastični film koji je u potpunosti sniman u Srbiji. FSFF će imati čast da ugosti i
+            reditelje iz Italije, Marka Ristorija i Luku Bonija koji će se sa publikom družiti u petak, 26. oktobra.
+        </div>
+        <img src="img/bio/fsff-logo-2.png" class="align-self-center ml-3" alt="Cineplexx">
+    </div>
+    <br>
+    <div class="media" style="padding-left: 30px; padding-right: 50px;">
+        <img src="img/bio/sumadija_kg.jpg" class="align-self-center mr-3" alt="zvezda">
+        <div class="media-body" style="border: 1px solid lightgray; padding: 5px;">
+            <h6 class="mt-0">Подршка државе за реконструкцију дворане Шумадија</h6>
+            <p></p>
+            <p class="mb-0">Отворена далеке 1968. године са хиљаду 41 седиштем, као конгресна дворана Шумадија,
+                до новог миленијума била је неизоставна тачка у друштвеном, културном животу Крагујевчана.
+                На овом месту, одржан је низ концерата, фестивала, културно уметничких програма,
+                али дворана Шумадија највише се памти по биоскопу.
+                Последњих десет година место је неупотребљиво, а бројни проблеми,
+                недостатак новца и пројектне документације оптерећивали су све раније покушаје
+                да се реконструише и приведе намени једна од највећих дворана у Србији.
+                Град Крагујевац је искористио позив да кроз пројекат „Градови у фокусу“ коначно уради
+                идејни пројекат и техничку документацију.
+                С обзиром на то, да су последњих година све учесталије гостујуће представе и концерти
+                жанровски различитих извођача, привремени подстанарски смештај на бинама у разним установама
+                показао се сувише тесним.
+                Уз сво гостопримство осталих установа, и публика и извођачи слажу се у једном:
+                није исто као некад на сцени у Шумадији. На потезу је држава.</p>
+        </div>
+    </div>
+    <br>
+    <div class="media" style="padding-left: 30px; padding-right: 50px;">
+        <div class="media-body" style="border: 1px solid lightgray; padding: 5px;">
+            <h5 class="mt-0 mb-1">Jedni srpski predstavnik na Filmskom festivalu u Kanu, „Teret“,</h5>
+            Najnagrađivaniji srpski film ove godine i jedni srpski predstavnik na Filmskom festivalu u Kanu, „Teret“, od
+            početka decembra prikazivaće se u domaćim bioskopima. Film mladog reditelja Ognjena Glavonića premijeru u
+            Beogradu imao je nedavno na Festivalu autorskog filma.
+
+            Ukratko: Vlada radi kao vozač kamiona tokom NATO bombardovanja Srbije 1999. godine. Vozeći kamion sa
+            nepoznatim teretom sa jedne kosovske destinacije do Beograda, Vlada susreće najrazličitije likove u ratom
+            zahvaćenoj Srbiji. „Teret“ otvara pitanja ne samo o odnosu prošlosti i sadašnjosti kroz kosovsku dramu iz
+            devedesetih godina prošlog veka, nego i o potrebi ljudi koje žive na Balkanu da povežu rasturen istorijski
+            narativ kroz život više generacija.
+
+            Publika u Beogradu imaće priliku da „Teret“ pogleda sve do 12. decembra u Dvorani KCB u kojoj će biti
+            organizovane i dve specijalne projekcije – 7. decembra, kada će posle filma publika moći da razgovara sa
+            producentom filma Sefanom Ivančićem, kao i 11. decembra kada su razgovor i druženje planirani sa rediteljem
+            Ognjenom Glavonićem.
+
+            Od 6. decembra „Teret“ će se naći na repertoaru bioskopa Fontana, a prvo gostovanje van glavnog grada imaće
+            na reviji Autorskog festivala u Subotici od 6. decembra,
+        </div>
+        <img src="img/bio/teret.jpg" class="align-self-center ml-3" alt="teret">
+    </div>
+    <br>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4 text-center font-weight-bold">Zaboravljeni bioskopi Beograda</h1>
+        </div>
+    </div>
+    <section>
+        <div class="container">
+            <div class="row">
+                <img src="img/bio/zab20oktobar.jpg" class="align-self-center ml-3" alt="teret">
+                <img src="img/bio/zabKozara.jpg" class="align-self-center ml-3" alt="teret">
+                <img src="img/bio/zabVozdovac-1024x638.jpg" class="align-self-center ml-3" alt="teret">
+            </div>
+            <br>
+            <p>Samo još stariji sugrađani se mogu sećati nekadašnjih beogradskih bioskopa koji su poput velikih svetskih
+                bioskopa bili uvek puni, a doći do karte je bila posebna priča.</p>
+            <h6>
+                BIOSKOP JADRAN
+            </h6>
+
+            <p>Bioskop Jadran nalazio se na Trgu republike a sada su na tom mestu kafići. U njemu su se uglavnom
+                prikazivale
+                drame i domaća filmska ostvarenja, pa tako pamtim da je domaći film „Una“ sa Sonjom Savić dugo bio na
+                repertoaru
+                ovog bioskopa od njegovog snimanja.</p>
+
+            <h6>BIOSKOP ODEON</h6>
+
+            <p>Bioskop Odeon nalazio se u ulici Narodnog fronta ( Savski venac). Ovaj bioskop bio je jedan od
+                najposećenijih u
+                Beogradu sa preko 880 sedišta i doći do karte za premijerne filmove je bila avantura. Ukoliko niste
+                poranili
+                onda ste kupovali karte kod „tapkaroša“ za duplo,a kod nekih filmova i troduplo, od redovne cene karte.
+                Prikazivali su se filmovi koji su bili veliki hitovi u svetu poput: „E.T“, „Terminator“, „Star Wars“…
+                Malo je
+                poznato da je upravo u ovom bioskopu počelo među prvima prikazivanje nekog porno filma i to se davao
+                posle
+                ponoći. Prvi porno film koji je došao u beogradske bioskope bio je „Zvezda porno filma.“</p>
+
+            <h6>BIOSKOP SLAVIJA</h6>
+
+            <p>Bioskop Slavija nalazi se na samoj Slaviji i to na mestu gde je danas parking. Ovaj bioskop i nije bio
+                puno
+                posećen jer su se davali erotski filmovi, a u holu bioskopa bili su fliperi i video igrice na kojima su
+                bili
+                uglavnom tadašnji beogradski prevaranti.</p>
+
+            <h6>BIOSKOP ZVEZDA</h6>
+
+            <p>Bioskop Zvezda nalazi se u ulici Terazije 40 i sem fasade jedino je podsećanje na nekadašnji najbolji
+                bioskop
+                koji je uglavnom prikazivao komedije. U bioskop je uglavnom prikazivao komedije i po tome je bio poznat
+                pa su se
+                tu mogla gledati mnoga filmska ostvarenja iz pomenutog žanra. Ceo serijal francuskog filma o Žandarmu iz
+                San
+                Tropeza se tu mogao odgledati. U to neko vreme prošlog veka komedije su bile veoma popularne a pogotovo
+                tinejdžerske komedije. Mnogi i danas poznati glumci u komedijama su kao tinejdžeri izgradili karijere.
+            </p>
+
+            <h6>BIOSKOP KOSMAJ</h6>
+
+            <p>Bioskop Kosmaj nalazio se u pasažu na Terazijama a na tom mestu se sada nalaze butici. Bioskop je
+                uglavnom imao
+                popodnevna prikazivanja filmova koji su se spremali da izađu sa repertoara bioskopa. Ukoliko niste
+                stigli da
+                odgledate neki film tokom redovnog prikazivanja uvek je postojao period kada se našao u bioskopu Kosmaj.
+                Bioskop
+                neradi od 2005 ili 2006.godine.</p>
+
+            <h6>BIOSKOP PARTIZAN</h6>
+
+            <p>Bioskop Partizan zatvoren je početkom 2004.godine a nalazio se preko puta Železničke stanice. Tokom
+            devedesetih
+            u njemu su se prikazivali isključivo borilački filmovi ili ti tada poznati žanr karate filmovi. Filmovi su
+            uglavnom bili iz kineske produkcije a u nekoliko navrata znalo se da se na repertoaru nadju i filmovi o
+            „Godzili“ . Svi filmovi Brus Lija tu su se mogli odgledati. Na ulazu u bioskop bili su automati sa raznim
+            igricama i fliperima koji su punili bioskop pored svojih redovnih repertoara. Međutim,tokom vremena bioskop
+            je
+            prestao sa prikazivanjem karate filmova pa su se u tom bioskopu uglavnom mogli odgledati erotski filmovi.
+
+            Bioskop je bio na „ulici“ na lošem glasu jer su znali neki da započnu i tuče pre projekcije filma a stariji
+            sugrađani sigurno pamte kada su projekcije u određenim terminima otkazivane ili vraćane pare jer je došlo do
+            tuče. Takođe je bio mesto okupljanja dilera,makroa,narkomana i ostalog „čudnog“ sveta.</p>
+
+            <h6>BIOSKOP BALKAN</h6>
+
+            <p>Bisokop Balkan nalazi se u Braće Jugovića 16. Zatvoren je 2010.godine i bilo je nekoliko najava da će se
+            otvoriti 2020.godine ali pokazaće vreme. Ovaj bioskop ima bogatu istoriju pa se mnogi trude da ga opet vrate
+            svojoj nameni. U njemu su se prikazivala filmska ostvarenja od umetničkog značaja. Prikazivala su se domaća
+            i
+            strana ostvarenja.</p>
+
+            <h6>BIOSKOP SLAVICA</h6>
+
+            <p>Biskop Slavica nalazio se na Karaburmi.Naziv je dobio po prvom posleratnom istoimenom filmu. Bioskop je imao
+            raznovrstan filmski program i zatvoren je još devedesetih godina prošlog veka.</p>
+
+            <h6>BIOSKOP VOŽDOVAC</h6>
+
+            <p>Bioskop Voždovac nalazio se u ulici Kralja Vladimira i zatvoren je 1997.godine. I ovaj bioskop poput
+            bioskopa
+            Slavica imao je raznovrstan filmski program iz kojeg su potekle mnoge beogradske ljubavne priče koje su se
+            prepričavale po Beogradu. Ako si hteo da izvedeš devojku u bioskop,što je bio deo izlazaka u to vreme,
+            uglavnom
+            je to bioskop Voždovac u nadi da ćeš postati deo urbane beogradske ljubavne priče.</p>
+
+            <h6>BIOSKOP KOZARA</h6>
+
+            <p>Bioskop Kozara nalazio se u Bezistanu i bio je kultni bioskop Beograda. Premijere velikih filmskih
+            ostvarenja
+            prikazivale su se u Domu sindikata i bioskopu Kozara. Doći do karata je bilo skoro uzaludno. Čak i nakon
+            premijere nedeljama nije bilo moguće doći do karata od jutarnjih termina pa do večernjih. Kozara je bila raj
+            za „tapkaroše“ koji su zarađivali velike sume novca ukoliko bi uspeli da kupe karte pre svih a pričalo se da su
+            otkupljivali sve karte „preko veze“ i ako si mogao maksimalno da kupiš 4 karte.</p>
+
+            <h6>BIOSKOP 20.OKTOBAR</h6>
+
+            <p>Bioskop 20.oktobar nalazio se u Balkanskoj ulici preko puta hotela Moskav. Pored Kozare bio je jedan od
+                kultnih bioskopa u kojem su se prikazivali uglavnom akcioni filmovi,trileri i borilački filmovi. Bioskop je imao
+                dve dvorane u kojima su se prikazivali različiti filmovi pa su neki koristili priliku kada redar nije tu da
+                plate jedan film a posle da se ušunjaju u drugu dvoranu. I tu su „tapkaroši “ znali da profitiraju kada je
+                bilo dobrih filmova a u to vreme bilo ih je u izobilju.
+
+                Beograd je nekada bio prestonica bioskopa gde su se u određenim bioskopima pokazivali određeni žanrovi
+                ili bili određeni za premijere velikih hitova. Pored navednih bioskopa o kojima se može puno pričati tu su bili i
+                bioskopi: „Sloboda“,“Jedinstvo“, „Sutjeska“,“Avala“…
+
+                Zatvaranje Kozare i 20.oktobra je ono što sigurno će zauvek „boleti“ nas starije jer kultna mesta koja
+                su stvarala istoriju su stala sa svojom istorijom. Kada istorija stane koju istoriju mladost može nastaviti
+                da stvara i održava.</p>
+                <div class="row">
+                        <img src="img/bio/zabbalkan.jpg" class="align-self-center ml-3" alt="teret">
+                        <img src="img/bio/zabkosmaj.jpg" class="align-self-center ml-3" alt="teret">
+                        <img src="img/bio/zabdodjijuce.jpg" class="align-self-center ml-3" alt="teret">
+                        <img src="img/bio/zabzvezda.jpg" class="align-self-center ml-3" alt="teret">
+
+                </div>    
+        </div>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style_kreiraj.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div id="container">
+        <div id='forma'>
+
+            <form id="formular" onsubmit="return validacija()">
+
+                <fieldset>
+                    <legend> Креирајте сами свој културни догађај </legend>
+                    <p id="greska"></p>
+                    <label for="vrsta">Врста догађаја: </label><br>
+                    <select name="vrsta" id="vrsta">
+                        <option value=" " readonly> </option>
+                        <optgroup label="Film" id="films">
+                            <option name="film" value="Klasici">Трилер</option>
+                            <option name="film" value="Drama">Драма</option>
+                            <option name="film" value="SF">SF</option>
+                            <option name="film" value="Akcioni">Акциони</option>
+                            <option name="film" value="Horor">Хорор</option>
+                            <option name="film" value="Krimic">Кримић</option>
+                        </optgroup>
+                        <optgroup label="Pozoriste">
+                            <option name="predstave" value="predstava">Представа</option>
+                            <option name="predstave" value="balet">Балет</option>
+                            <option name="predstave" value="opera">Опера</option>
+                            <option name="predstave" value="decje">Дечја представа</option>
+                        </optgroup>
+                        <optgroup label="Muzejska postavka">
+                            <option name="muzej" value="likovna">Ликовна уметност</option>
+                            <option name="muzej" value="primenjena">Примењена уметност</option>
+                            <option name="muzej" value="priroda">Природа</option>
+                            <option name="muzej" value="istorija">Историја</option>
+                            <option name="muzej" value="vajarstvo">Вајарство</option>
+                        </optgroup>
+                        <optgroup label="Koncert">
+                            <option name="koncert" value="pop">Поп музике</option>
+                            <option name="koncert" value="rock">Рок музике</option>
+                            <option name="koncert" value="narodna">Народне музике</option>
+                            <option name="koncert" value="klasika">Класичне музике</option>
+                        </optgroup>
+                    </select>
+                    <br>
+
+                    <label for="dugme"></label><br>
+                    <input type="button" id="dugme" value="Изаберите локацију" onclick="lokacija()">
+                    <select name="lok" id="lok">
+
+                    </select>
+                    <br><br>
+                    <label for="naziv_dogadjaja">Назив догађаја: </label><br>
+                    <input type="text" id="naziv_dogadjaja" name="naziv">
+                    <br>
+                    <br>
+                    <label for="broj_posetilaca">Очекивани број посетилаца: </label><br>
+                    <input type="text" id="broj_posetilaca" name="broj_posetilaca">
+                    <br>
+                    <br>
+                    <label for="datum">Датум догађаја: </label>
+                    <input type="date" id="datum" name="datum">
+                    <br>
+                    <label for="pocetak">са почетком у: </label>
+                    <input type="time" id="pocetak" name="pocetak"><span> сати.</span>
+                    <br>
+                    <br>
+                    <label for="organizator">Организатор догађаја: </label><br>
+                    <input type="text" id="organizator" name="organizator">
+                    <br>
+                    <br>
+                    <label for="opis">Кратак опис догађаја:</label>
+                    <br>
+                    <textarea id="opis"></textarea>
+
+                </fieldset>
+
+                <br>
+
+                <input type="submit" value="Posalji">
+            </form>
+        </div>
+        <div id="flajer">
+            <table id="tabela">
+                <tr>
+                    <td>Догађај:</td>
+                    <td id="tvrsta"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="tnaziv"></td>
+                </tr>
+                <tr>
+                    <td>Локација:</td>
+                    <td id="tlokacija"></td>
+                </tr>
+                <tr>
+                    <td>Број посетилаца:</td>
+                    <td id="tposetilaca"></td>
+                </tr>
+                <tr>
+                    <td>Датум и време:</td>
+                    <td id="tdatumivreme"></td>
+                </tr>
+                <tr>
+                    <td>Организатор:</td>
+                    <td id="torganizator"></td>
+                </tr>
+                <tr>
+                    <td>Опис:</td>
+                    <td id="topis"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="slika"></td>
+                </tr>
+
+
+
+
+
+            </table>
+        </div>
+    </div>
+    <div id="animacija">
+        <div id="krug">
+            <img src="img/bb.png" alt="bb">
+        </div>
+    </div>
+
+    <script>
+
+
+        var greska = document.getElementById("greska");
+        var dogadjaji = [];
+        var dogadjaj = {}
+        var lokacije = {
+            "film": ["", "Дворана Културног Центра", "Cineplexx - Delta City", "Академија 28", "Фонтана", "Кинотека"],
+            "predstave": ["", "Народно Позориште", "Београдско Драмско Позориште", "Југословенско Драмско Позориште",
+                "Позориште на Теразијама", "Звездара Театар", "Позориште Бошко Буха", "Позориштанце Пуж"],
+            "muzej": ["", "Narodni muzej", "Muzej primenjene umetnosti", "Prirodnjacki muzej",
+                "Istorijski muzej Srbije", "Muzej grada Beograda"],
+            "koncert": ["", "Београдска Арена", "Сава Центар", "Дом Синдиката", "Коларац", "Студентски Културни Центар"]
+        };
+
+        //ponuda lokacije na osnovu odabira vrste dogadjaja
+
+        function lokacija() {
+            var sel_dogadjaj = document.getElementById("vrsta");
+            var popuni = document.getElementById("lok");
+            var izabrano = sel_dogadjaj.options[sel_dogadjaj.selectedIndex].getAttribute('name');
+            console.log(lokacije[izabrano]);
+            popuni.style.display = "inline-block";
+            lok.innerHTML = "";
+            for (i in lokacije[izabrano]) {
+                //console.log(lokacije[izabrano][i]);
+                var opcija = document.createElement("option");
+                opcija.innerHTML = lokacije[izabrano][i];
+                popuni.appendChild(opcija);
+            }
+            //lokacije.izabrano ce da radi za sve samo jednim prolazom :)
+
+            /*if (izabrano == 'film') {
+                
+                for (i in bioskopi) {
+                    var opcija = document.createElement("option");
+                    opcija.innerHTML = lokacije.izabrano[i];
+                    popuni.appendChild(opcija);
+                }
+            }
+            if (izabrano == "balet") {
+                popuni.style.display = "inline-block";
+                for (i in pozorista) {
+                    var opcija = document.createElement("option");
+                    opcija.innerHTML = pozorista[i];
+                    popuni.appendChild(opcija);
+                }
+            }*/
+        }
+
+
+        // function validacija() {
+        //     return odabran_dogadjaj() && odabrana_lokacija() && unet_naziv() && ispravan_broj_posetilaca() &&
+        //         odabran_datum() && odabrano_vreme() && ispravan_organizator() && unet_opis() && confirm("Да ли сте сигурни?");
+        // }
+
+        function odabran_dogadjaj() {
+            var dog = document.getElementById("vrsta");
+
+            if (dog.selectedIndex == 0) {
+                greska.innerHTML = "Није одабран догађај";
+                return false;
+            }
+
+            dogadjaj.vrsta = dog.options[dog.selectedIndex].text;
+            return true;
+        }
+
+
+        // function pritisnuto_dugme() {
+        //     var dugme = document.getElementById("dugme").onlick;
+
+        //     if (dugme != true) {
+        //         greska.innerHTML = "Притиском на дугме одаберите локацију!";
+        //         return false;
+        //     }
+
+        //     return true;
+        // }
+
+        function odabrana_lokacija() {
+            var lok = document.getElementById("lok");
+
+            if (lok.selectedIndex == 0) {
+                greska.innerHTML = "Није одабрана локација";
+                return false;
+            }
+            dogadjaj.lokacija = lok.options[lok.selectedIndex].value;
+            return true;
+        }
+
+        function unet_naziv() {
+            var naziv = document.getElementById("naziv_dogadjaja").value;
+
+            if (naziv.trim().length == 0) {
+                greska.innerHTML = "Није унет назив догађаја";
+                return false;
+            }
+            dogadjaj.naziv = naziv;
+            return true;
+        }
+
+
+        function dohvati() {
+            var za_dohvatanje = localStorage.getItem("dogadjaji");
+            var p = JSON.parse(za_dohvatanje);
+            console.log(p);
+            return p;
+        }
+        function smesti_dogadjaj(dogadjaj) {
+            dohvaceni = false;
+            var p = dohvati();
+            if (p != null) {
+                p.push(dogadjaj);
+                za_smestanje = JSON.stringify(p);
+            } else {
+                dogadjaji.push(dogadjaj);
+                za_smestanje = JSON.stringify(dogadjaji);
+            }
+            localStorage.setItem("dogadjaji", za_smestanje);
+            return;
+        }
+
+
+        function cifra(str) {
+            if (str >= '0' && str <= '9')
+                return true;
+
+            return false;
+        }
+
+
+
+        function ispravan_broj_posetilaca() {
+            var posetilaca = document.getElementById("broj_posetilaca").value;
+
+            if (posetilaca.trim().length == 0) {
+                greska.innerHTML = "Није унет број посетилаца";
+                return false;
+            }
+            for (i = 0; i < posetilaca.length; i++) {
+                if (!cifra(posetilaca.charAt(i))) {
+                    greska.innerHTML = "Неисправан број посетилаца";
+                    return false;
+                }
+            }
+            dogadjaj.posetilaca = posetilaca;
+            return true;
+        }
+
+        function odabran_datum() {
+            var datums = document.getElementById('datum').value;
+            if (datums == 0) {
+                greska.innerHTML = "Није унет датум";
+                return false;
+            }
+            dogadjaj.datum = datums;
+            return true;
+        }
+
+        function odabrano_vreme() {
+            var vreme = document.getElementById('pocetak').value;
+            if (vreme == 0) {
+                greska.innerHTML = "Није унето време почетка догађаја";
+                return false;
+            }
+            dogadjaj.vreme = vreme;
+            return true;
+        }
+
+        function ispravan_organizator() {
+            var organizat = document.getElementById("organizator").value;
+
+            if (organizat.trim().length == 0) {
+                greska.innerHTML = "Није унет организатор";
+                return false;
+            }
+            dogadjaj.organizator = organizat;
+            return true;
+        }
+
+        function unet_opis() {
+            var opis = document.getElementById("opis").value;
+
+            if (opis.trim().length == 0) {
+                greska.innerHTML = "Унесите опис догађаја";
+                return false;
+            }
+            dogadjaj.opis = opis;
+            return true;
+        }
+
+        function validacija() {
+            if (odabran_dogadjaj() && odabrana_lokacija() && unet_naziv() && ispravan_broj_posetilaca() &&
+                odabran_datum() && odabrano_vreme() && ispravan_organizator() && unet_opis()) {
+                console.log(dogadjaj);
+                smesti_dogadjaj(dogadjaj);
+                document.getElementById("flajer").style.visibility = visible;
+                return true;
+            }
+            return false;
+        }
+
+        //popunjavanje tabele flajera!
+        var p = dohvati();
+        document.getElementById("tvrsta").innerHTML = p[8].vrsta;
+        document.getElementById("tnaziv").innerHTML = p[8].naziv;
+        document.getElementById("tlokacija").innerHTML = p[8].lokacija;
+        document.getElementById("tposetilaca").innerHTML = p[8].posetilaca;
+        document.getElementById("tdatumivreme").innerHTML = p[8].datum + " " + "у" + " " + p[8].vreme + "сати";
+        document.getElementById("torganizator").innerHTML = p[8].organizator;
+        document.getElementById("topis").innerHTML = p[8].opis;
+        
+
+
+    </script>
+
+</body>
+
+</html>

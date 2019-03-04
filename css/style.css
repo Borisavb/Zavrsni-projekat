@@ -1,0 +1,98 @@
+#container {
+    
+    display: grid;
+    
+    grid-template-columns: 80% auto;  
+    grid-template-rows: 15% 3% 78% 4%;  
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    grid-template-areas:
+        "naslov naslov"
+        "navbar navbar"
+        "main aside"
+        "footer footer";
+    border: 1px solid black;
+    
+}
+
+#naslov {
+    grid-area: naslov;
+    font-size: xx-large;
+    background-color: lightsalmon;    
+}
+#naslov h1 {
+    text-align: center;
+    margin-left: 200px;
+}
+#navbar {
+    grid-area: navbar;
+    background-color: rgb(169, 184, 199);
+    
+}
+#main {
+    grid-area: main;
+    display: grid;
+    grid-gap: 1px;
+    grid-template-rows: 44% 44% auto;
+    grid-template-columns: 50% auto; 
+    grid-template-areas:
+        "karta1 karta2"
+        "karta3 karta4"
+        "vesti vesti";
+    
+    height: 660px;
+    width: 100%;
+    /* justify-items: center;
+    align-items: center; */
+}
+
+#karta1 {
+    grid-area: karta1; 
+    
+    
+}
+#karta2 {
+    grid-area: karta2;   
+    
+}
+#karta3 {
+    grid-area: karta3;   
+   
+}
+#karta4 {
+    grid-area: karta4;  
+    
+}
+#vesti {
+    grid-area: vesti; 
+    width: 100%;   
+    /* height: 100px; */
+    border: 1px solid black;
+    background-color: lightseagreen;
+}
+
+.karta {
+    border: 1px solid yellow;
+}
+   
+    
+
+#main img {
+    
+    width: 320px;
+    height: 220px;
+    
+}
+
+#aside {
+    grid-area: aside;
+    background-color: lightpink;
+    width: 100%;
+    height: 660px;
+}
+#footer {
+    grid-area: footer;
+    background-color: lightgreen;
+    width: 100%;
+    /* height: 50px; */
+}
