@@ -10,49 +10,44 @@
 </head>
 
 <body>
-
-
     <div id="container">
         <div id='forma'>
-
             <form id="formular" onsubmit="return validacija()">
-
                 <fieldset>
-                    <legend> Креирајте сами свој културни догађај </legend>
-                    <p id="greska"></p>
+                    <legend><b> Креирајте сами свој културни догађај </b></legend>
+
                     <label for="vrsta">Врста догађаја: </label><br>
                     <select name="vrsta" id="vrsta">
-                        <option value=" " readonly> </option>
+                        <option label=" "></option>
                         <optgroup label="Film" id="films">
-                            <option name="film" value="Klasici">Трилер</option>
-                            <option name="film" value="Drama">Драма</option>
-                            <option name="film" value="SF">SF</option>
-                            <option name="film" value="Akcioni">Акциони</option>
-                            <option name="film" value="Horor">Хорор</option>
-                            <option name="film" value="Krimic">Кримић</option>
+                            <option class="film" value="Klasici">Трилер</option>
+                            <option class="film" value="Drama">Драма</option>
+                            <option class="film" value="SF">SF</option>
+                            <option class="film" value="Akcioni">Акциони</option>
+                            <option class="film" value="Horor">Хорор</option>
+                            <option class="film" value="Krimic">Кримић</option>
                         </optgroup>
                         <optgroup label="Pozoriste">
-                            <option name="predstave" value="predstava">Представа</option>
-                            <option name="predstave" value="balet">Балет</option>
-                            <option name="predstave" value="opera">Опера</option>
-                            <option name="predstave" value="decje">Дечја представа</option>
+                            <option class="predstave" value="predstava">Представа</option>
+                            <option class="predstave" value="balet">Балет</option>
+                            <option class="predstave" value="opera">Опера</option>
+                            <option class="predstave" value="decje">Дечја представа</option>
                         </optgroup>
                         <optgroup label="Muzejska postavka">
-                            <option name="muzej" value="likovna">Ликовна уметност</option>
-                            <option name="muzej" value="primenjena">Примењена уметност</option>
-                            <option name="muzej" value="priroda">Природа</option>
-                            <option name="muzej" value="istorija">Историја</option>
-                            <option name="muzej" value="vajarstvo">Вајарство</option>
+                            <option class="muzej" value="likovna">Ликовна уметност</option>
+                            <option class="muzej" value="primenjena">Примењена уметност</option>
+                            <option class="muzej" value="priroda">Природа</option>
+                            <option class="muzej" value="istorija">Историја</option>
+                            <option class="muzej" value="vajarstvo">Вајарство</option>
                         </optgroup>
                         <optgroup label="Koncert">
-                            <option name="koncert" value="pop">Поп музике</option>
-                            <option name="koncert" value="rock">Рок музике</option>
-                            <option name="koncert" value="narodna">Народне музике</option>
-                            <option name="koncert" value="klasika">Класичне музике</option>
+                            <option class="koncert" value="pop">Поп музике</option>
+                            <option class="koncert" value="rock">Рок музике</option>
+                            <option class="koncert" value="narodna">Народне музике</option>
+                            <option class="koncert" value="klasika">Класичне музике</option>
                         </optgroup>
                     </select>
                     <br>
-
                     <label for="dugme"></label><br>
                     <input type="button" id="dugme" value="Изаберите локацију" onclick="lokacija()">
                     <select name="lok" id="lok">
@@ -80,14 +75,14 @@
                     <br>
                     <label for="opis">Кратак опис догађаја:</label>
                     <br>
-                    <textarea id="opis"></textarea>
-
+                    <textarea rows="4" cols="30" id="opis"></textarea>
+                    <br>
+                    <input type="submit" value="Пошаљи"><br>
+                    <p id="greska"></p>
                 </fieldset>
-
-                <br>
-
-                <input type="submit" value="Posalji">
+                
             </form>
+            <button id="dugme_flajer" onclick="(otvori_flajer() && zatvori_formu())">КРЕИРАЈ ДОГАЂАЈ</button>
         </div>
         <div id="flajer">
             <table id="tabela">
@@ -119,26 +114,19 @@
                     <td>Опис:</td>
                     <td id="topis"></td>
                 </tr>
-                <tr>
-                    <td></td>
-                    <td id="slika"></td>
-                </tr>
-
-
-
-
-
             </table>
+            <div id="container_img">
+                <img id="slika_flajer" src="img/bioskop2.jpg" alt="bioskop">
+            </div>
         </div>
     </div>
-    <div id="animacija">
+    <!-- <div id="animacija">
         <div id="krug">
             <img src="img/bb.png" alt="bb">
         </div>
-    </div>
+    </div> -->
 
     <script>
-
 
         var greska = document.getElementById("greska");
         var dogadjaji = [];
@@ -147,8 +135,8 @@
             "film": ["", "Дворана Културног Центра", "Cineplexx - Delta City", "Академија 28", "Фонтана", "Кинотека"],
             "predstave": ["", "Народно Позориште", "Београдско Драмско Позориште", "Југословенско Драмско Позориште",
                 "Позориште на Теразијама", "Звездара Театар", "Позориште Бошко Буха", "Позориштанце Пуж"],
-            "muzej": ["", "Narodni muzej", "Muzej primenjene umetnosti", "Prirodnjacki muzej",
-                "Istorijski muzej Srbije", "Muzej grada Beograda"],
+            "muzej": ["", "Народни музеј", "Музеј примењене уметности", "Природњачки музеј",
+                "Историјски музеј Србије", "Музеј града Београда"],
             "koncert": ["", "Београдска Арена", "Сава Центар", "Дом Синдиката", "Коларац", "Студентски Културни Центар"]
         };
 
@@ -157,8 +145,8 @@
         function lokacija() {
             var sel_dogadjaj = document.getElementById("vrsta");
             var popuni = document.getElementById("lok");
-            var izabrano = sel_dogadjaj.options[sel_dogadjaj.selectedIndex].getAttribute('name');
-            console.log(lokacije[izabrano]);
+            var izabrano = sel_dogadjaj.options[sel_dogadjaj.selectedIndex].getAttribute('class');
+            // console.log(lokacije[izabrano]);
             popuni.style.display = "inline-block";
             lok.innerHTML = "";
             for (i in lokacije[izabrano]) {
@@ -167,31 +155,9 @@
                 opcija.innerHTML = lokacije[izabrano][i];
                 popuni.appendChild(opcija);
             }
-            //lokacije.izabrano ce da radi za sve samo jednim prolazom :)
-
-            /*if (izabrano == 'film') {
-                
-                for (i in bioskopi) {
-                    var opcija = document.createElement("option");
-                    opcija.innerHTML = lokacije.izabrano[i];
-                    popuni.appendChild(opcija);
-                }
-            }
-            if (izabrano == "balet") {
-                popuni.style.display = "inline-block";
-                for (i in pozorista) {
-                    var opcija = document.createElement("option");
-                    opcija.innerHTML = pozorista[i];
-                    popuni.appendChild(opcija);
-                }
-            }*/
         }
 
 
-        // function validacija() {
-        //     return odabran_dogadjaj() && odabrana_lokacija() && unet_naziv() && ispravan_broj_posetilaca() &&
-        //         odabran_datum() && odabrano_vreme() && ispravan_organizator() && unet_opis() && confirm("Да ли сте сигурни?");
-        // }
 
         function odabran_dogadjaj() {
             var dog = document.getElementById("vrsta");
@@ -204,18 +170,6 @@
             dogadjaj.vrsta = dog.options[dog.selectedIndex].text;
             return true;
         }
-
-
-        // function pritisnuto_dugme() {
-        //     var dugme = document.getElementById("dugme").onlick;
-
-        //     if (dugme != true) {
-        //         greska.innerHTML = "Притиском на дугме одаберите локацију!";
-        //         return false;
-        //     }
-
-        //     return true;
-        // }
 
         function odabrana_lokacija() {
             var lok = document.getElementById("lok");
@@ -239,7 +193,6 @@
             return true;
         }
 
-
         function dohvati() {
             var za_dohvatanje = localStorage.getItem("dogadjaji");
             var p = JSON.parse(za_dohvatanje);
@@ -259,7 +212,6 @@
             localStorage.setItem("dogadjaji", za_smestanje);
             return;
         }
-
 
         function cifra(str) {
             if (str >= '0' && str <= '9')
@@ -333,24 +285,42 @@
             if (odabran_dogadjaj() && odabrana_lokacija() && unet_naziv() && ispravan_broj_posetilaca() &&
                 odabran_datum() && odabrano_vreme() && ispravan_organizator() && unet_opis()) {
                 console.log(dogadjaj);
+                console.log(dogadjaji);
                 smesti_dogadjaj(dogadjaj);
-                document.getElementById("flajer").style.visibility = visible;
+                get.getElementById("dugme_flajer").style.display = "inline-block";
+                greska.innerHTML = "Унесите опис догађаја";
+
+
                 return true;
             }
             return false;
         }
 
         //popunjavanje tabele flajera!
-        var p = dohvati();
-        document.getElementById("tvrsta").innerHTML = p[8].vrsta;
-        document.getElementById("tnaziv").innerHTML = p[8].naziv;
-        document.getElementById("tlokacija").innerHTML = p[8].lokacija;
-        document.getElementById("tposetilaca").innerHTML = p[8].posetilaca;
-        document.getElementById("tdatumivreme").innerHTML = p[8].datum + " " + "у" + " " + p[8].vreme + "сати";
-        document.getElementById("torganizator").innerHTML = p[8].organizator;
-        document.getElementById("topis").innerHTML = p[8].opis;
-        
-
+        function otvori_flajer() {
+            var f = document.getElementById("flajer");
+            f.style.display = "inline-block";
+            document.getElementById("forma").style.display = "none";
+            // document.getElementById("tvrsta").innerHTML = dogadjaj.vrsta;
+            // document.getElementById("tnaziv").innerHTML = dogadjaj.naziv;
+            // document.getElementById("tlokacija").innerHTML = dogadjaj.lokacija;
+            // document.getElementById("tposetilaca").innerHTML = dogadjaj.posetilaca;
+            // document.getElementById("tdatumivreme").innerHTML = dogadjaj.datum + " " + "у" + " " + dogadjaj.vreme + "сати";
+            // document.getElementById("torganizator").innerHTML = dogadjaj.organizator;
+            // document.getElementById("topis").innerHTML = dogadjaj.opis;
+            var dohvati_dogadjaj = localStorage.getItem("dogadjaji");
+            var dd = JSON.parse(dohvati_dogadjaj);
+            console.log(dd);
+            console.log((dd.length - 1));
+            document.getElementById("tvrsta").innerHTML = dd[(dd.length - 1)].vrsta;
+            document.getElementById("tnaziv").innerHTML = '"' + dd[(dd.length - 1)].naziv + '"';
+            document.getElementById("tlokacija").innerHTML = dd[(dd.length - 1)].lokacija;
+            document.getElementById("tposetilaca").innerHTML = dd[(dd.length - 1)].posetilaca;
+            document.getElementById("tdatumivreme").innerHTML = dd[(dd.length - 1)].datum +
+                " " + "у" + " " + dd[(dd.length - 1)].vreme + " " + "сати";
+            document.getElementById("torganizator").innerHTML = dd[(dd.length - 1)].organizator;
+            document.getElementById("topis").innerHTML = dd[(dd.length - 1)].opis;
+        }
 
     </script>
 
