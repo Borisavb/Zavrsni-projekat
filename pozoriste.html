@@ -2,87 +2,419 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style_poz.css">
-    <title>Document</title>
+    <title>Beogradska pozorišta</title>
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta author name="Borisav Bogdanovic">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="shortcut icon" href="img/bb.png" />
 </head>
 
 <body>
-    <div id="kontejner">
-        <div id="naslov">
-            <div class="italic">
-                
-                    <H1>Кроз Београдска Позоришта</H1>
-                
-            </div>
-        </div>
-        <div id="navbar">
-            navbar
-        </div>
-        <div id="repertoar">
-            repertoar
-
-        </div>
-
-        <div id="cenovnik">
-            <ul>Cene karata za redovni repertoar:
-                <li>Pre podne: 350din.</li>
-                <li>Posle podne: 450din</li>
-                <li>Večernje predstave: 700din</li>
-                <br>
-                <ul>Povlašćene cene karata:
-                    <li>Deca: 100din</li>
-                    <li>Studenti: 250din</li>
-                    <li>Penzioneri: 200din</li>
-                </ul>
-
-
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
+        <a class="navbar-brand text-white" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="https://hocupozoriste.rs/drame" target="_blank">Drame</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="https://hocupozoriste.rs/komedije" target="_blank">Komedije</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="https://hocupozoriste.rs/baleti" target="_blank">Baleti</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="https://hocupozoriste.rs/opere" target="_blank">Opere</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="https://hocupozoriste.rs/predstave-za-decu" target="_blank">Za
+                        decu</a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Repertoar</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" target="_blank"
+                            href="http://atelje212.rs/bilet/repertoar.php#danas">Atelje 212</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" target="_blank"
+                            href="https://bilet.zvezdarateatar.rs/repertoar.php#danas">Zvezdara Teatar</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" target="_blank" href="http://jdp.rs/">Jugoslovensko Dramsko</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" target="_blank"
+                            href="https://pozoristeterazije.com/repertoar/">Pozorište na Terazijama</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" target="_blank"
+                            href="http://www.bdp.rs/index.php/repertoar-mart-2019">Beogradsko Dramsko</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" target="_blank"
+                            href="https://teatar.bitef.rs/Bitef-teatar/295/Repertoar.shtml">Bitef Teatar</a>
+                    </div>
+                </li>
             </ul>
-        </div>
 
-        <div id="footer">
-            footer
+        </div>
+    </nav>
+    <div class="jumbotron jumbotron-fluid bg-dark">
+        <div class="container">
+            <h1 class="display-4 text-center font-weight-bold text-white">Vodič kroz Beogradska pozorišta</h1>
+        </div>
+    </div>
+    <div class="container">
+        <a class="pl-5 " onmouseover="this.style.zoom='1.08'" onmouseout="this.style.zoom='1'"
+            href="http://www.pozoriste-slavija.co.rs/"><img alt="slavija" src="img/poz/slavija-logo.jpg"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom='1.08'" onmouseout="this.style.zoom='1'"
+            href="http://akademija28.com/"><img alt="akademija 28" src="img/poz/akademija-28-logo.jpg"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom = '1.08'" onmouseout="this.style.zoom = '1'"
+            href="http://www.krsmanovic.rs/"><img alt="krsmanac" src="img/poz/akud-krsmanac-logo.png"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom = '1.08'" onmouseout="this.style.zoom = '1'"
+            href="http://www.atelje212.rs/"><img alt="atelje 212" src="img/poz/atelje-212-logo.jpg"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom = '1.08'" onmouseout="this.style.zoom = '1'"
+            href="http://www.bdp.rs/"><img alt="slavija" src="img/poz/bdp-logo.jpg"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom = '1.08'" onmouseout="this.style.zoom = '1'"
+            href="http://ckvladadivljan.rs/"><img alt="vlada_divljan" src="img/poz/vlada-divljan-logo.png"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom = '1.08'" onmouseout="this.style.zoom = '1'"
+            href="http://dadov.rs/"><img alt="dadov" src="img/poz/dadov-logo.jpg"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom = '1.08'" onmouseout="this.style.zoom = '1'"
+            href="http://www.dds.co.rs/"><img alt="dds" src="img/poz/domsindikata-logo.jpg"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom = '1.08'" onmouseout="this.style.zoom = '1'"
+            href="http://jdp.rs/"><img alt="JDP" src="img/poz/jdp-logo.jpg"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom = '1.08'" onmouseout="this.style.zoom = '1'"
+            href="http://www.kpgtyu.org/"><img alt="KPGT" src="img/poz/kpgt-logo.png"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom = '1.08'" onmouseout="this.style.zoom = '1'"
+            href="http://www.domomladine.org/"><img alt="Dom Omladine" src="img/poz/logo-dob.png"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom = '1.08'" onmouseout="this.style.zoom = '1'"
+            href="http://operatheatremadlenianum.com/"><img alt="Madlenijanum" src="img/poz/madlenianum-logo.jpg"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom = '1.08'" onmouseout="this.style.zoom = '1'"
+            href="http://www.narodnopozoriste.rs/"><img alt="Narodno" src="img/poz/np-beograd-logo.png"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom = '1.08'" onmouseout="this.style.zoom = '1'"
+            href="http://www.panteatar.rs/"><img alt="pinokio" src="img/poz/pan-teatar-logo.jpg"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom = '1.08'" onmouseout="this.style.zoom = '1'"
+            href="http://www.pinokio.com/"><img alt="puz" src="img/poz/pinokio-logo.jpg"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom = '1.08'" onmouseout="this.style.zoom = '1'"
+            href="http://buha.rs/"><img alt="bosko buha" src="img/poz/pozoriste-bosko-buha-logo.jpg"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom = '1.08'" onmouseout="this.style.zoom = '1'"
+            href="http://www.pozoristancepuz.com/"><img alt="Puz" src="img/poz/puz-logo.png"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom = '1.08'" onmouseout="this.style.zoom = '1'"
+            href="http://www.malopozoriste.co.rs"><img alt="malo poz" src="img/poz/dusko-radovic-logo.jpg"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom = '1.08'" onmouseout="this.style.zoom = '1'"
+            href="http://teatarlevo.com/"><img alt="teatar levo" src="img/poz/teatar-levo.png"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom = '1.08'" onmouseout="this.style.zoom = '1'"
+            href="https://tnb.tickets.rs/"><img alt="na brdu" src="img/poz/teatar-na-brdu-logo.PNG"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom = '1.08'" onmouseout="this.style.zoom = '1'"
+            href="http://www.teatar13.com/"><img alt="teatar 13" src="img/poz/teatar13-logo.jpg"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom = '1.08'" onmouseout="this.style.zoom = '1'"
+            href="http://www.pozoristeterazije.com/"><img alt="terazije" src="img/poz/terazije-logo.jpg"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom = '1.08'" onmouseout="this.style.zoom = '1'"
+            href="http://teatar.bitef.rs/"><img alt="bitef" src="img/poz/Bitef-logo.jpg"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom = '1.08'" onmouseout="this.style.zoom = '1'"
+            href="http://www.dkcb.rs/"><img alt="DKC" src="img/poz/dkc-bg-logo.jpg"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom = '1.08'" onmouseout="this.style.zoom = '1'"
+            href="http://zvezdarateatar.rs/"><img alt="zvezdara" src="img/poz/zvezdara-logo.png"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom = '1.08'" onmouseout="this.style.zoom = '1'"
+            href="http://www.npsterija.rs/"><img alt="sterija" src="img/poz/sterija-logo.jpg"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom = '1.08'" onmouseout="this.style.zoom = '1'"
+            href="http://www.dahteatarcentar.com/"><img alt="Dah" src="img/poz/dah.logo.jpg"></a>
+        <a class="pl-5 " onmouseover="this.style.zoom = '1.08'" onmouseout="this.style.zoom = '1'"
+            href="http://www.dksg.rs/"><img alt="dksg" src="img/poz/dksg-logo.jpg"></a>
+
+    </div>
+    <br>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4 text-center font-weight-bold">Najpoznatija beogradska pozorišta</h1>
+        </div>
+    </div>
+    <div class="media bg-dark" style="padding-left: 30px; padding-right: 50px;">
+        <img src="img/poz/JDP 1.jpg" class="align-self-center mr-0 ml-0" alt="JDP">
+
+        <div class="media-body" style="padding: 25px;">
+            <h5 class="mt-0 text-white">Jugoslovensko Dramsko Pozorište</h5>
+
+            <p class="mb-0 text-white">Jugoslovensko dramsko pozorište nalazi se u Ulici Kralja Milana, odmah do parka
+                Manjež i nadomak trga Slavija, u samom centru Beograda. Osnovano je 1947. Godine kade je reditelj Bojan
+                Stupica postavljen kao umetnički rukovodilac. Mnogi velikani glumačkog zanata iz ostalih jugoslovenskih
+                zemalja učestvovali su u stvaranju ovog pozorišta. Sakupilo se 60 probranih glumaca, od kojih su i dan
+                danas poznati Mira Stupica, Branka Veselinović, Mladja Veselinović i Marija Crnobori. Na mestu
+                Jugoslovenskog dramskog pozorišta ranije je bila jahačka škola čija je konjušnica adaptirana i
+                pretvorena u prvu scenu Jugoslovenskog dramskog pozorišta u Beogradu.
+                3. Aprila 1984. Godine odigrana je prva predstava “Kralj Betajnove” u režiji Bojana Stupice.
+                1977. godine 17. oktobra JDP je izgoreo do temelja zbog greške na instalacijama. Pozorište je
+                rekonstruisano a Velika scena je ponovo otpočela sa radom 2003. godine, 23. Maja. Predstava koja je
+                obeležila ponovno otvaranje JDP-a bila je delo Jovana Sterije popovića, “Rodoljupci”. Na repertoaru
+                Jugoslovenskog dramskog pozorišta u Beogradu nalaze se mnogobrojna klasična dela pisaca kao što su
+                Čehov, Ostrovski, Gorki, Šekspir, Molijer, Lorka i mnogih drugih.</p>
+        </div>
+        <img src="img/poz/JDP 2.jpg" class="align-self-center mr-0 ml-0" alt="JDP">
+    </div>
+    <hr class="mt-0 mb-0">
+    <div class="media bg-dark" style="padding-left: 30px; padding-right: 50px;">
+        <img src="img/poz/Narodno 1.jpg" class="align-self-center mr-0 ml-0" alt="narodno">
+
+        <div class="media-body" style="padding: 25px;">
+            <h5 class="mt-0 text-white">Narodno Pozorište</h5>
+
+            <p class="mb-0 text-white">Narodno pozorište u Beogradu nalazi se na Trgu Republike, na uglu Francuske i
+                Vasine ulice, direktno nasuprot spomenika Mihailu Obrenoviću. Narodno pozorište u Beogradu osnovano je
+                1868. godine nakon gostovanja glumaca Srpskog narodnog pozorišta iz Novog Sada, kada se knez Mihailo
+                Obrenović oduševio umetnošću glumaca novosadskog pozorišta i odlučio da izgradi novo, stalno zdanje
+                beogradskog teatra i time pokrene kulturološki razvoj Beograda. 1869. godine Narodno pozorište useljeno
+                je u velelepno zdanje u kojem se i danas nalazi. U sklopu Narodnog pozorišta u Beogradu funkcionišu tri
+                umetničke jedinice, Opera, Balet i Drama. U funkciji su scene Raša Railović i Velika scena.
+                Enterijer je uredjen po ugledu italijanskih modela pozorišta, i u prvom planu su ugodnost i uredjenje
+                gledališta, sa posebnom pažnjom posvećenom kraljevskoj loži.
+                Nesvakidašnji repertoar i vrhunski glumci Narodno pozorište čine savršenim izborom ukoliko želite da se
+                razonodite, uživate u kvalitetno provedenom vremenu i iz Beograda ponesete jedno od najlepših iskustava.
+            </p>
+        </div>
+        <img src="img/poz/Narodno 2.jpg" class="align-self-center mr-0 ml-0" alt="narodno">
+    </div>
+    <hr class="mt-0 mb-0">
+    <div class="media bg-dark" style="padding-left: 30px; padding-right: 50px;">
+        <img src="img/poz/Atelje 1a.jpg" class="align-self-center mr-0 ml-0" alt="atelje">
+
+        <div class="media-body" style="padding: 25px;">
+            <h5 class="mt-0 text-white">ATELJE 212</h5>
+
+            <p class="mb-0 text-white">Pozorište Atelje 212 nalazi se u Svetogorskoj ulici na broju 12, nadomak Doma
+                Omladine i Trga republike u beogradu. Sa radom je počelo 12. Novembra 1956. Godine, a prva ikada
+                odigrana predstava na sceni Ateljea 212 bila je Geteov “Faust”. Pozorište Atelje 212 osnovala je grupa
+                umetnika sa idejom da oformi teatar u kojem će se prikazivati avangardna dela. Dom pozorišta Atelje 212
+                postala je zgrada “Borbe” koja je sa svojih 212 stolica učestvovala u stvaranju imena danas naveliko
+                poznatog teatra.
+                Danas ovo Beogradsko pozorište jedno je od najpoznatijih zbog svojih vrhunskih izvedbi raznovsnih
+                pozorišnih komada. Sav repertoar se odigrava na dve scene, Mira Trailović i Petar Kralj. Scena Mira
+                Trailović dobila je naziv po istoimenoj dugogodišnjoj upravnici teatra Atelje 212, koja je zajedno sa
+                jovanom Ćirilovom osnovala jedan od najvećih evropskih pozorišnih festivala, BITEF.
+                Nakon Mire Trailović na upravničko mesto dolazi Ljubomir Draškić koji tokom svojih dvanaest godina
+                upravljanjem pozorištem Atelje 212 proširuje glumački ansambl i dobija novu zgradu. Atelje 212 u novoj,
+                adaptiranoj zgradi postaje jedno od najbolje opremljenih pozorišta na Balkanu. Danas Velika scena - Mira
+                trailović ima 385 mesta, a scena Petar Kralj 141 mesto. </p>
+        </div>
+        <img src="img/poz/Atelje 2.jpg" class="align-self-center mr-3" alt="atelje">
+    </div>
+    <hr class="mt-0 mb-0">
+    <div class="media bg-dark" style="padding-left: 30px; padding-right: 50px;">
+        <img src="img/poz/BDP 1.jpg" class="align-self-center mr-0 ml-0" alt="BDP">
+
+        <div class="media-body" style="padding: 25px;">
+            <h5 class="mt-0 text-white">Beogradsko Dramsko Pozorište</h5>
+
+            <p class="mb-0 text-white">Beogradsko dramsko pozorište, najstariji gradski teatar smešten je u zgradi na
+                    Crvenom krstu, izopštenoj iz gradske vreve, udaljenoj 3 km od strogog centra grada. Zgrada pozorišta je
+                    2003. godine potpuno renovirana, po najsavremenijim tehničkim standardima, što pozorište čini idealnim
+                    ne samo za izvođenje pozorišnih predstava, već i za održavanje najraznovrsnijih multimedijalnih događaja i
+                    poslovnih skupova.Pozorište raspolaže sa preko 900 m² klimatizovanog prostora. Scena „Rade Marković“
+                    kapaciteta je 366 mesta i 8 mesta u loži, poseduje poseban ulaz i mesta za osobe sa invaliditetom,
+                    potpuno je tehnički opremljena.Nova scena kapaciteta 129 mesta, kompletno je tehnički opremljena, u svom
+                    sklopu poseduje i svečanu salu. Rediteljska sala može da primi do 30 ljudi, postoji mogućnost tehničke
+                    podrške. Pozorište poseduje 10 kompletno opremljenih garderoba.Uz kompletnu audio opremu, rasvetu i HD
+                    video bim, postoje mogućnosti simultanog prevoda, titlovanja za potrebe prevoda na displeju, priključci za
+                    internet i tv, i direktan audio i video kontakt.
+            </p>
+        </div>
+        <img src="img/poz/BDP 2.jpg" class="align-self-center mr-0 ml-0" alt="BDP">
+    </div>
+    <hr class="mt-0 mb-0">
+    <div class="media bg-dark" style="padding-left: 30px; padding-right: 50px;">
+        <img src="img/poz/Bitef 1.jpg" class="align-self-center mr-0 ml-0" alt="bitef">
+
+        <div class="media-body" style="padding: 25px;">
+            <h5 class="mt-0 text-white">Bitef Teatar</h5>
+
+            <p class="mb-0 text-white">Bitef Teatar nalazi se na uglu Drinčiceve i Knez Miletine ulice, na malom trgu
+                Mire Trailović, odmah do Bajloni pijace, u neposrednoj blizini boemske četvrti Skadarlija. Bitef teatar
+                smešten je u neobičnom zdanju, čija je prvobitna namena bila religijskog tipa. 1940. Godine sa planom da
+                oforme evangelističku - hrišćansku crkvu Nemci su započeli izgradnju objekta. Medjutim taj plan nikada
+                nije realizovan, zgrada nikada nije osveštana pa nije postala verski objekat. Izmedju 1988. I 1989.
+                Godine zgrada je rekonstruisana i prilagodjena potrebama pozorišta i data Bitef Teatru na koriščenje. 28
+                godina kasnije, evangelističko zdanje i dalje je dom jednog od najneobičnijih pozorišta na Balkanu.
+
+                Bitef Teatar je avangardno pozorište osnovano 1989. Godine sa ciljem širenja uticaja tada vrlo
+                popularnog BITEF festivala, zatim otkrivanje i negovanje novih pozorišnih i dramskih tendencija kao i
+                pružanje prostora umetnicima koji svojim radom ne pripadaju klasičnoj sceni pozorišta.
+                Bitef Teatar nema stalno zapošljenu postavku glumaca, već zapošljava po projektima.
+                Unikatan repertoar Bitef Teatra privlači svakog posetioca Beograda kao i same Beogradjane, jedno je od
+                najpopularnijih pozorišta, a karte za predstave koje se igraju u njemu prodaju se vrlo brzo. </p>
+        </div>
+        <img src="img/poz/Bitef 2.jpg" class="align-self-center mr-0 ml-0" alt="bitef">
+    </div>
+    <hr class="mt-0 mb-0">
+    <div class="media bg-dark" style="padding-left: 30px; padding-right: 50px;">
+        <img src="img/poz/Zvezdara teatar 2.jpg" class="align-self-center mr-0 ml-0" alt="JDP">
+
+        <div class="media-body" style="padding: 25px;">
+            <h5 class="mt-0 text-white">Zvezdara Teatar</h5>
+
+            <p class="mb-0 text-white">Jugoslovensko dramsko pozorište nalazi se u Ulici Kralja Milana, odmah do parka
+                Manjež i nadomak trga Slavija, u samom centru Beograda. Osnovano je 1947. Godine kade je reditelj Bojan
+                Stupica postavljen kao umetnički rukovodilac. Mnogi velikani glumačkog zanata iz ostalih jugoslovenskih
+                zemalja učestvovali su u stvaranju ovog pozorišta. Sakupilo se 60 probranih glumaca, od kojih su i dan
+                danas poznati Mira Stupica, Branka Veselinović, Mladja Veselinović i Marija Crnobori. Na mestu
+                Jugoslovenskog dramskog pozorišta ranije je bila jahačka škola čija je konjušnica adaptirana i
+                pretvorena u prvu scenu Jugoslovenskog dramskog pozorišta u Beogradu.
+                3. Aprila 1984. Godine odigrana je prva predstava “Kralj Betajnove” u režiji Bojana Stupice.
+                1977. godine 17. oktobra JDP je izgoreo do temelja zbog greške na instalacijama. Pozorište je
+                rekonstruisano a Velika scena je ponovo otpočela sa radom 2003. godine, 23. Maja. Predstava koja je
+                obeležila ponovno otvaranje JDP-a bila je delo Jovana Sterije popovića, “Rodoljupci”. Na repertoaru
+                Jugoslovenskog dramskog pozorišta u Beogradu nalaze se mnogobrojna klasična dela pisaca kao što su
+                Čehov, Ostrovski, Gorki, Šekspir, Molijer, Lorka i mnogih drugih.</p>
+        </div>
+        <img src="img/poz/Zvezdara teatar 1.jpg" class="align-self-center mr-0 ml-0" alt="JDP">
+    </div>
+    <br>
+    <div class="media" style="padding-left: 30px;">
+        <img src="img/poz/bonton/bonton.jpg" class="align-self-center mr-5 ml-5" alt="bonton">
+        <div class="media-body" style="padding: 50px;">
+            <p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary mt-5" data-toggle="modal" data-target="#exampleModalLong">
+                    Bonton
+                </button>
+                <h5>
+                    Pročitajte osnove lepog ponašanja u pozorištu (ali i ne samo u pozorištu) i neka vam ove poruke
+                    služe kao
+                    vodič prilikom trajanja predstave kako biste vi, ali i oni pored vas mogli da uživaju u događaju.
+                </h5>
+                <!-- <img src="img/poz/bonton/bonton.jpg" class="align-self-center ml-5" alt="bonton"> -->
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Bonton u pozorištu</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+
+
+                                Na vreme se informišite o repertoaru pozorišta, predstavi koju gledate, rezervišite i
+                                kupite karte. Bićete zadovolјniji ako sve ovo odradite na vreme. Ukoliko zakasnite i
+                                istekne Vam rezervacija, nemojte kriviti biletare. Ukoliko ne kupite karte na vreme,
+                                možete biti nezadovolјni mestom, nemojte kriviti biletare i razvodnike za to.
+
+
+                                <img src="img/poz/bonton/bonton-1.jpg" class="align-self-center mr-3 mb-5 mt-5"
+                                    alt="bonton">
+
+                                U pozorište dođite pristojno odeveni (trenerke, mini suknje, šorcevi, iscepane farmerke,
+                                sportske patike, papuče, i slično nisu prikladna garderoba). Ukoliko je u pitanju
+                                premijera, obucite se svečano.
+
+                                Dođite čisti i sređeni, ali izbegavajte korišćenje prejakog parfema, smetaćete lјudima
+                                oko Vas.
+
+                                <img src="img/poz/bonton/bonton-2.jpg" class="align-self-center mr-3 mb-5 mt-5"
+                                    alt="bonton">
+
+                                Obavezno koristite garderobu za jakne, mantile, kapute, velike šešire, kišobrane, velike
+                                glomazne tašne i slično. Nemojte smetati lјudima oko Vas.
+
+                                Nemojte kasniti, dođite dovolјno ranije, ako zakasnite nemate pravo da negodujete ako
+                                Vam ne bude dozvolјen ulazak u salu, najbolјe je da sačekate prvu pauzu. Ukoliko Vas
+                                razvodnici ipak uvedu u salu iako je počela predstava, smestite se na prva slobodna
+                                mesta, nemate prava insistirati na svojim mestima. U toku prve pauze možete se
+                                premestiti na mesta za koja imate karte.
+
+                                <img src="img/poz/bonton/bonton-3.jpg" class="align-self-center mr-3 mb-5 mt-5"
+                                    alt="bonton">
+
+                                Ukoliko Vam je predstava nepoznata, ili želite da saznate nešto više o komadu, možete to
+                                uraditi putem programa koji se nalazi kod razvodnika u foajeu.
+
+                                Ukoliko povedete dete u pozorište, objasnite mu pravila ponašanja, informišite ga na
+                                vreme o tome šta ćete gledati, ako je nešto nejasno ili ima nekih pitanja, sačekajte
+                                pauzu ili kraj predstave za objašnjenja i odgovore.
+
+                                <img src="img/poz/bonton/bonton-4.jpg" class="align-self-center mr-3 mb-5 mt-5"
+                                    alt="bonton">
+
+                                Kada se smeštate na svoje mesto, a ono se nalazi u sredini reda, obavezno se izvinite
+                                onima koje morate podići da biste prošli, a kroz red prolazite okrenuti licem prema
+                                lјudima koji već sede.
+
+                                Ako ste bolesni, imate kijavicu ili kašalј, ostanite kod kuće, Vaš kašalј ili kijavica
+                                smetaće ostaloj publici i glumcima, a u sali treba da vlada potpuna tišina.
+
+                                Nemojte unositi hranu, grickalice, sokove i slično, šuškaćete i biti glasni, smetaćete
+                                ostaloj publici i glumcima, a u sali treba da vlada potpuna tišina.
+
+                                <img src="img/poz/bonton/bonton-5.jpg" class="align-self-center mr-3 mb-5 mt-5"
+                                    alt="bonton">
+
+                                Obavezno isklјučite mobilne telefone, ili bilo koje druge uređaje, u toku trajanja
+                                predstave. Ukoliko ipak zaboravite da isklјučite zvono, a telefon Vam zazvoni u toku
+                                predstave odmah ga isklјučite, nemojte se ni slučajno javiti. Uvek možete proveriti
+                                propuštene poruke i pozive u toku pauze ili nakon predstave.
+
+                                Ne šalјite i ne proveravajte tekstualne poruke ili mailove u toku predstave, svetlo
+                                Vašeg mobilnog telefona je još jače u mraku, smetaćete lјudima oko Vas, a ako ste blizu
+                                scene smetaće i glumcima.
+
+                                <img src="img/poz/bonton/bonton-6.jpg" class="align-self-center mr-3 mb-5 mt-5"
+                                    alt="bonton">
+
+                                Nemojte fotografisati ili snimati predstavu.
+
+                                Nemojte pričati, pevati, komentarisati u toku predstave, smetaćete ostaloj publici i
+                                glumcima.
+
+                                <img src="img/poz/bonton/bonton-7.jpg" class="align-self-center mr-3 mb-5 mt-5"
+                                    alt="bonton">
+
+                                Držite noge na podu, nemojte ih podizati na sedište ispred Vašeg.
+
+                                Aplauzom nagradite glumce, možete aplaudirati i u toku predstave ali nakon završenog
+                                teksta odnosno određene scene. Ukoliko niste sigurni da li je pravi trenutak za aplauz
+                                bolјe nemojte aplaudirati. Najveći aplauz je na kraju izvođenja. Ali nemojte
+                                preterivati, vikati, ili dobacivati neumesne komentare.
+
+                                <img src="img/poz/bonton/bonton-8.jpg" class="align-self-center mr-3 mb-5 mt-5"
+                                    alt="bonton">
+
+                                Ukoliko morate da izađete iz sale ranije, sačekajte prvu pauzu ili sačekajte da se
+                                određena scena završi. Nemojte izlaziti u sred scene, jako ćete smetati glumcima.
+
+                                Nemojte žuriti da izađete kada se završi predstava, sačekajte da se završi aplauz, da
+                                glumci odu sa scene ili da se spusti zavesa.
+
+                                <img src="img/poz/bonton/bonton-9.jpg" class="align-self-center mr-3 mb-5 mt-5"
+                                    alt="bonton">
+
+                                Hvala na pažnji.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>
         </div>
     </div>
 
-
-
-    
-
-    <script>
-
-        // var link = document.createElement("p");
-        // var cene = document.getElementById("cene");
-        // link.innerHTML = "<a href=''>Najnoviji repertoar</a>";
-        // link.setAttribute("id", "link");
-        // cene.appendChild(link);
-
-        // var slika = document.createElement("img");
-        // slika.setAttribute("src", "bdp.jpg");
-        // slika.setAttribute("alt", "SLIKA BDP");
-        // slika.setAttribute("width", "200px");
-        // slika.setAttribute("height", "250px");
-        // document.body.appendChild(slika);
-
-        // var tabela = document.createElement("table");
-        // tabela.setAttribute("border", "2");
-        // tabela.setAttribute("width", "200px");
-        // tabela.setAttribute("height", "200px");
-
-        // var red = [];
-        // var kolona = [];
-
-      
-
-
-        // function januarski_popust(){
-        //     alert("Dragi korisnici, \n obavestavamo Vas da ce cena karata u Januaru \n biti  snizena za 50%");
-        // }
-        // setTimeout(januarski_popust, 10000);
-
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
 
     </script>
