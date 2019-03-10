@@ -1,98 +1,226 @@
+*{
+    box-sizing: border-box;
+}
+
 #container {
     
     display: grid;
+    height: 950px;
+    width: 100%;
     
-    grid-template-columns: 80% auto;  
-    grid-template-rows: 15% 3% 78% 4%;  
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
+    grid-template-columns: 66.6% auto;  
+    grid-template-rows: 12% 5% auto 4%;  
+    /* grid-column-gap: 5px;
+    grid-row-gap: 5px; */
     grid-template-areas:
         "naslov naslov"
         "navbar navbar"
         "main aside"
         "footer footer";
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    background-image: url(../img/clouds.jpg);   
+    overflow-wrap: break-word;
+    overflow: hidden;
     
+}
+
+@media (max-width: 938px){
+    #container{
+        display: flex;        
+        flex-direction: column;
+        
+        height: 1600px;
+        /* grid-template-areas:
+        "naslov"
+        "navbar"
+        "main"
+        "aside"
+        "footer"; */
+    }    
+    #main{
+        height: auto;
+    }
+    #aside{
+        height: 1000px;
+        align-items: center;
+        justify-content: space-around;
+    }    
+       
+         
+}
+
+@media (max-width: 640px){
+    #container{
+        display: flex;
+        
+        flex-direction: column;
+        height: 2000px;
+        /* grid-template-areas:
+        "naslov"
+        "navbar"
+        "main"
+        "aside"
+        "footer"; */
+    }
+    #main{
+        height: 1850px;
+    }
+    #aside{
+        height: 900px;
+        align-items: center;
+        justify-content: space-around;
+    }      
 }
 
 #naslov {
     grid-area: naslov;
     font-size: xx-large;
-    background-color: lightsalmon;    
-}
-#naslov h1 {
     text-align: center;
-    margin-left: 200px;
 }
-#navbar {
-    grid-area: navbar;
-    background-color: rgb(169, 184, 199);
+#naslov h3 {
+    
+    align-self: center;
+    text-shadow: 4px 4px 8px grey;
+    top: 0;
+    left: 20%;
+    /* margin-left: 200px; */
+}
+
+#animacija img{
+    opacity: 0.3;
+    border-radius: 50%;
+}
+
+#animacija{
+    animation-name: anima;
+    animation-duration: 10s;
+    animation-delay: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+    left: 4;
     
 }
+
+@keyframes anima{
+    0% {left:4px; transform: rotate(0deg);}
+    100% {left: 1140px; transform: rotate(1120deg);}
+    /* 100% {left:0px; transform: rotate(0deg);} */
+}
+
+
+
+#navbar {
+    grid-area: navbar;
+    /* background-color: rgb(197, 208, 219); */
+    opacity: 0.7; 
+    
+}
+
+#navbar ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #666;
+}
+
+#navbar li{
+    float: left;
+}
+
+#navbar li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  }
+
+#navbar li a:hover{
+
+    background-color: #111;
+
+}  
+
 #main {
     grid-area: main;
-    display: grid;
-    grid-gap: 1px;
-    grid-template-rows: 44% 44% auto;
-    grid-template-columns: 50% auto; 
+    display: flex;
+    flex-wrap: wrap;
+/*     
+    grid-template-rows: 42% 42% auto;
+    grid-template-columns: 50% 50%; 
     grid-template-areas:
         "karta1 karta2"
         "karta3 karta4"
-        "vesti vesti";
+        "vesti vesti"; */
     
-    height: 660px;
+    /* height: auto; */
     width: 100%;
-    /* justify-items: center;
-    align-items: center; */
+    justify-content: space-around;
+    align-items: center;
 }
 
-#karta1 {
-    grid-area: karta1; 
-    
-    
-}
-#karta2 {
-    grid-area: karta2;   
-    
-}
-#karta3 {
-    grid-area: karta3;   
-   
-}
-#karta4 {
-    grid-area: karta4;  
-    
-}
-#vesti {
-    grid-area: vesti; 
-    width: 100%;   
-    /* height: 100px; */
-    border: 1px solid black;
-    background-color: lightseagreen;
-}
 
-.karta {
-    border: 1px solid yellow;
-}
-   
-    
 
 #main img {
     
-    width: 320px;
-    height: 220px;
+    /* width: 100%;
+    height: 100%;    */
+    box-shadow: 12px 9px 4px #666;
+    opacity: 1;
+   
+}
+
+#main img:hover {
+    opacity: 0.85;
+    box-shadow: 14px 11px 4px #888;
+    zoom: 1.02;
+
+}
+
+.karta p{
+    text-align: center;
+    text-shadow: 2px 2px 3px tomato;
+    font-size: x-large;
     
 }
 
 #aside {
     grid-area: aside;
-    background-color: lightpink;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
     width: 100%;
-    height: 660px;
+    align-items: center;
+    justify-content: space-around;
+    
 }
 #footer {
-    grid-area: footer;
-    background-color: lightgreen;
+    grid-area: footer;    
     width: 100%;
-    /* height: 50px; */
+    
+    
+   
+    
 }
+#footer img { 
+    position: relative;
+    border-radius: 50%;
+    margin-left: 80px;
+    bottom: 10px;
+    transition-property: transform;
+    transition-duration: 2s;
+}
+
+#footer img:hover {
+    transform: rotate(1000deg);
+  }
+
+#footer span{
+    position: relative;
+    bottom: 20px;
+    left: 100px;
+}
+
