@@ -1,0 +1,217 @@
+*{
+  box-sizing: border-box;
+}
+
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-image: url("../img/clouds.jpg");
+  background-repeat: no-repeat;
+  height: auto; 
+  overflow-wrap: break-word;
+  
+  min-height: 100%;
+
+  position:fixed;
+  padding:0;
+  margin:0;
+  width: 100%;
+  top:0;
+  left:0;
+
+  }
+
+.header{
+  height: 100px;
+}  
+
+#forma{
+  
+  font-size: 18px;
+  /* background-color: lightgreen; */
+  width: auto;
+  height: 90%; 
+  display: inline-block;
+  border: 1px solid black;
+  text-align: center;
+  margin-top: 30px;
+  
+}
+
+#formular{
+  
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+#flajer{
+  
+  width: 450px;
+  height: 100%;
+  display: none;
+  background-image: url(../img/fback5.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 16px;
+  text-shadow: 3px 2px 2px gray;
+  color: black;
+  border: 3px solid blue; 
+  overflow-wrap: break-word; 
+  margin-top: 30px;
+
+}
+
+#flajer_n{
+  
+  width: 450px;
+  height: 100%;
+  display: none;
+  background-image: url(../img/fback1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 16px;
+  text-shadow: 3px 2px 2px gray;
+  color: black;
+  border: 3px solid blue; 
+  overflow-wrap: break-word; 
+  margin-top: 30px;
+
+}
+
+#dugme_flajer{
+  
+  width: 200px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 4px 4px 3px gray;
+  margin: 10px;
+}
+
+#dugme_raniji{
+
+    width: 150px;
+    height: 50px;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 4px 4px 3px gray;
+    margin: 10px;
+    display: none;
+    position: absolute;
+    top: 300px;
+    left: 550px;
+    /* border: 2px solid green; */
+    background-color: cornsilk;
+    text-shadow: 1px 1px 2px green;
+  }
+  
+
+
+#container_img{
+  position: relative;
+  height: 300px;
+}
+
+#container_img_n{
+  position: relative;
+  height: 300px;
+}
+
+#slika_flajer{
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: 7px 7px 6px rgb(77, 72, 72);
+  border: 1px solid black;
+}  
+
+#slika_flajer_n{
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: 7px 7px 6px rgb(77, 72, 72);
+  border: 1px solid black;
+}  
+  
+
+#tabela{
+  width: 100%;
+  
+}
+
+#tabela_n{
+  width: 100%;
+  
+}
+
+
+#tabela tr td{
+  padding: 12px 15px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-weight: bolder;  
+  max-width: 300px;
+  word-wrap:break-word;
+  
+}
+
+#tabela_n tr td{
+  padding: 12px 15px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-weight: bolder;  
+  max-width: 300px;
+  word-wrap:break-word;
+  
+}
+
+textarea {
+  width: 80%;
+  height: 100px;
+  padding: 6px 10px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+#greska {
+  color: red;
+  text-shadow: 1px 1px 2px;
+  font-size: 18px;
+}
+#naziv_dogadjaja {
+  margin-right: 0;
+}
+#dugme {
+  width: 150px;
+  height: 40px;
+  font-weight: bold;
+}
+#lok{
+  display: none;
+}
+
+#animacija{
+  width: 100%;
+  height: 150px;
+  
+}
+#krug img{
+  border-radius: 50%;
+  transition-property: transform;
+  transition-duration: 3s;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
+#krug img:hover {
+  transform: rotate(1000deg);
+}

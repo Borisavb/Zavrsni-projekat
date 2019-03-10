@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style_kreiraj.css">
+    <link rel="shortcut icon" href="img/bb.png" />
     <title>Document</title>
 </head>
 
@@ -19,32 +20,32 @@
                     <label for="vrsta">Врста догађаја: </label><br>
                     <select name="vrsta" id="vrsta">
                         <option label=" "></option>
-                        <optgroup label="Film" id="films">
-                            <option class="film" value="Klasici">Трилер</option>
+                        <optgroup label="Филм" id="films">
+                            <option class="film" value="Klasici">Класик</option>
                             <option class="film" value="Drama">Драма</option>
                             <option class="film" value="SF">SF</option>
                             <option class="film" value="Akcioni">Акциони</option>
                             <option class="film" value="Horor">Хорор</option>
                             <option class="film" value="Krimic">Кримић</option>
                         </optgroup>
-                        <optgroup label="Pozoriste">
-                            <option class="predstave" value="predstava">Представа</option>
+                        <optgroup label="Позориште">
+                            <option class="predstave" value="predstava">Позоришна представа</option>
                             <option class="predstave" value="balet">Балет</option>
                             <option class="predstave" value="opera">Опера</option>
                             <option class="predstave" value="decje">Дечја представа</option>
                         </optgroup>
-                        <optgroup label="Muzejska postavka">
+                        <optgroup label="Музејска поставка">
                             <option class="muzej" value="likovna">Ликовна уметност</option>
                             <option class="muzej" value="primenjena">Примењена уметност</option>
-                            <option class="muzej" value="priroda">Природа</option>
-                            <option class="muzej" value="istorija">Историја</option>
+                            <option class="muzej" value="priroda">Изложба природе</option>
+                            <option class="muzej" value="istorija">Историјска изложба</option>
                             <option class="muzej" value="vajarstvo">Вајарство</option>
                         </optgroup>
-                        <optgroup label="Koncert">
-                            <option class="koncert" value="pop">Поп музике</option>
-                            <option class="koncert" value="rock">Рок музике</option>
-                            <option class="koncert" value="narodna">Народне музике</option>
-                            <option class="koncert" value="klasika">Класичне музике</option>
+                        <optgroup label="Концерти">
+                            <option class="koncert" value="pop">Концерт поп музике</option>
+                            <option class="koncert" value="rock">Концерт рок музике</option>
+                            <option class="koncert" value="narodna">Концерт народне музике</option>
+                            <option class="koncert" value="klasika">Концерт класичне музике</option>
                         </optgroup>
                     </select>
                     <br>
@@ -80,9 +81,9 @@
                     <input type="submit" value="Пошаљи"><br>
                     <p id="greska"></p>
                 </fieldset>
-                
+
             </form>
-            <button id="dugme_flajer" onclick="(otvori_flajer() && zatvori_formu())">КРЕИРАЈ ДОГАЂАЈ</button>
+            <button id="dugme_flajer" onclick="(otvori_flajer())">КРЕИРАЈТЕ ДОГАЂАЈ</button>
         </div>
         <div id="flajer">
             <table id="tabela">
@@ -116,9 +117,47 @@
                 </tr>
             </table>
             <div id="container_img">
-                <img id="slika_flajer" src="img/bioskop2.jpg" alt="bioskop">
+                <img id="slika_flajer" src="img/kreiraj/akcija.jpg" alt="bioskop">
             </div>
         </div>
+        <br>
+        <button id="dugme_raniji" onclick="(prethodni_dogadjaji())">ПРЕГЛЕД ПРЕТХОДНИХ ДОГАЂАЈА</button>
+        <div id="flajer_n">
+            <table id="tabela_n">
+                <tr>
+                    <td>Догађај:</td>
+                    <td id="tvrsta_n"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="tnaziv_n"></td>
+                </tr>
+                <tr>
+                    <td>Локација:</td>
+                    <td id="tlokacija_n"></td>
+                </tr>
+                <tr>
+                    <td>Број посетилаца:</td>
+                    <td id="tposetilaca_n"></td>
+                </tr>
+                <tr>
+                    <td>Датум и време:</td>
+                    <td id="tdatumivreme_n"></td>
+                </tr>
+                <tr>
+                    <td>Организатор:</td>
+                    <td id="torganizator_n"></td>
+                </tr>
+                <tr>
+                    <td>Опис:</td>
+                    <td id="topis_n"></td>
+                </tr>
+            </table>
+            <div id="container_img_n">
+                <img id="slika_flajer_n" src="img/kreiraj/decja.jpg" alt="decja">
+            </div>
+        </div>
+
     </div>
     <!-- <div id="animacija">
         <div id="krug">
@@ -132,7 +171,7 @@
         var dogadjaji = [];
         var dogadjaj = {}
         var lokacije = {
-            "film": ["", "Дворана Културног Центра", "Cineplexx - Delta City", "Академија 28", "Фонтана", "Кинотека"],
+            "film": ["", "Дворана Културног Центра", "Cineplexx - Delta City", "Академија 28", "Биоскоп Фонтана", "Кинотека"],
             "predstave": ["", "Народно Позориште", "Београдско Драмско Позориште", "Југословенско Драмско Позориште",
                 "Позориште на Теразијама", "Звездара Театар", "Позориште Бошко Буха", "Позориштанце Пуж"],
             "muzej": ["", "Народни музеј", "Музеј примењене уметности", "Природњачки музеј",
@@ -145,7 +184,7 @@
         function lokacija() {
             var sel_dogadjaj = document.getElementById("vrsta");
             var popuni = document.getElementById("lok");
-            var izabrano = sel_dogadjaj.options[sel_dogadjaj.selectedIndex].getAttribute('class');
+            var izabrano = sel_dogadjaj.options[sel_dogadjaj.selectedIndex].getAttribute("class");
             // console.log(lokacije[izabrano]);
             popuni.style.display = "inline-block";
             lok.innerHTML = "";
@@ -159,6 +198,7 @@
 
 
 
+
         function odabran_dogadjaj() {
             var dog = document.getElementById("vrsta");
 
@@ -166,8 +206,9 @@
                 greska.innerHTML = "Није одабран догађај";
                 return false;
             }
-
+            dogadjaj.klasa = dog.options[dog.selectedIndex].getAttribute("class");
             dogadjaj.vrsta = dog.options[dog.selectedIndex].text;
+
             return true;
         }
 
@@ -192,6 +233,8 @@
             dogadjaj.naziv = naziv;
             return true;
         }
+
+
 
         function dohvati() {
             var za_dohvatanje = localStorage.getItem("dogadjaji");
@@ -219,7 +262,6 @@
 
             return false;
         }
-
 
 
         function ispravan_broj_posetilaca() {
@@ -297,22 +339,28 @@
         }
 
         //popunjavanje tabele flajera!
+
         function otvori_flajer() {
             var f = document.getElementById("flajer");
             f.style.display = "inline-block";
-            document.getElementById("forma").style.display = "none";
-            // document.getElementById("tvrsta").innerHTML = dogadjaj.vrsta;
-            // document.getElementById("tnaziv").innerHTML = dogadjaj.naziv;
-            // document.getElementById("tlokacija").innerHTML = dogadjaj.lokacija;
-            // document.getElementById("tposetilaca").innerHTML = dogadjaj.posetilaca;
-            // document.getElementById("tdatumivreme").innerHTML = dogadjaj.datum + " " + "у" + " " + dogadjaj.vreme + "сати";
-            // document.getElementById("torganizator").innerHTML = dogadjaj.organizator;
-            // document.getElementById("topis").innerHTML = dogadjaj.opis;
+            var dr = document.getElementById("dugme_raniji");
+            dr.style.display = "block";
+            document.getElementById("forma").style.display = "none";            
             var dohvati_dogadjaj = localStorage.getItem("dogadjaji");
             var dd = JSON.parse(dohvati_dogadjaj);
             console.log(dd);
             console.log((dd.length - 1));
-            document.getElementById("tvrsta").innerHTML = dd[(dd.length - 1)].vrsta;
+            console.log(dd[(dd.length - 1)].klasa);
+            // var izabrano = sel_dogadjaj.options[sel_dogadjaj.selectedIndex].getAttribute("class");
+            if (dd[(dd.length - 1)].klasa == "koncert") {
+                document.getElementById("tvrsta").innerHTML = "Филм жанра:" + " " + dd[(dd.length - 1)].vrsta;
+            }
+            if (dd[(dd.length - 1)].klasa == "film") {
+                document.getElementById("tvrsta").innerHTML = "Филм жанра:" + " " + dd[(dd.length - 1)].vrsta;
+            }
+            else
+                document.getElementById("tvrsta").innerHTML = dd[(dd.length - 1)].vrsta;
+
             document.getElementById("tnaziv").innerHTML = '"' + dd[(dd.length - 1)].naziv + '"';
             document.getElementById("tlokacija").innerHTML = dd[(dd.length - 1)].lokacija;
             document.getElementById("tposetilaca").innerHTML = dd[(dd.length - 1)].posetilaca;
@@ -320,7 +368,121 @@
                 " " + "у" + " " + dd[(dd.length - 1)].vreme + " " + "сати";
             document.getElementById("torganizator").innerHTML = dd[(dd.length - 1)].organizator;
             document.getElementById("topis").innerHTML = dd[(dd.length - 1)].opis;
+
+            //ubacivanje slike u flajer
+            var za_sliku = dd[(dd.length - 1)].vrsta;
+            console.log(za_sliku);
+            var s_f = document.getElementById("slika_flajer");
+            
+            // s_f.src = `img/kreiraj/${za_sliku}.jpg`
+
+            if (za_sliku == "Kласик") s_f.src = "img/kreiraj/klasik.jpg"
+            if (za_sliku == "Драма") s_f.src = "img/kreiraj/drama.jpg"
+            if (za_sliku == "SF") { s_f.src = "img/kreiraj/SF.jpg" }
+            if (za_sliku == "Хорор") { s_f.src = "img/kreiraj/horor.jpg" }
+            if (za_sliku == "Акциони") { s_f.src = "img/kreiraj/akcija.jpg" }
+            if (za_sliku == "Кримић") { s_f.src = "img/kreiraj/krimic.png" }
+
+            if (za_sliku == "Позоришна представа") { s_f.src = "img/kreiraj/predstava.jpg" }
+            if (za_sliku == "Балет") { s_f.src = "img/kreiraj/balet.jpg" }
+            if (za_sliku == "Опера") { s_f.src = "img/kreiraj/krimic.png" }
+            if (za_sliku == "Дечја представа") { s_f.src = "img/kreiraj/decja.jpg" }
+
+            if (za_sliku == "Концерт поп музике") { s_f.src = "img/kreiraj/pop.jpg" }
+            if (za_sliku == "Концерт рок музике") { s_f.src = "img/kreiraj/rock.jpg" }
+            if (za_sliku == "Концерт народне музике") { s_f.src = "img/kreiraj/narodna.jpg" }
+            if (za_sliku == "Концерт класичне музике") { s_f.src = "img/kreiraj/klasicna.jpg" }
+
+            if (za_sliku == "Ликовна уметност") { s_f.src = "img/kreiraj/likovna.jpg" }
+            if (za_sliku == "Примењена уметност") { s_f.src = "img/kreiraj/primenjena.jpg" }
+            if (za_sliku == "Изложба природе") { s_f.src = "img/kreiraj/priroda.jpg" }
+            if (za_sliku == "Историјска изложба") { s_f.src = "img/kreiraj/istorija.jpg" }
+            if (za_sliku == "Вајарство") { s_f.src = "img/kreiraj/vajarstvo.jpg" }
+
         }
+        function prethodni_dogadjaji(){
+            var n = prompt("Unesite redni broj dogadjaja:");
+
+            var fn = document.getElementById("flajer_n");
+            fn.style.display = "inline-block";
+            var dohvati_dogadjaj = localStorage.getItem("dogadjaji");
+            var dd = JSON.parse(dohvati_dogadjaj);
+            if (dd[(n - 1)].klasa == "koncert") {
+                document.getElementById("tvrsta_n").innerHTML = "Концерт" + " " + dd[(n - 1)].vrsta;
+            }
+            if (dd[(n - 1)].klasa == "film") {
+                document.getElementById("tvrsta_n").innerHTML = "Филм жанра:" + " " + dd[(n - 1)].vrsta;
+            }
+            else
+                document.getElementById("tvrsta_n").innerHTML = dd[(n - 1)].vrsta;
+
+            document.getElementById("tnaziv_n").innerHTML = '"' + dd[(n - 1)].naziv + '"';
+            document.getElementById("tlokacija_n").innerHTML = dd[(n - 1)].lokacija;
+            document.getElementById("tposetilaca_n").innerHTML = dd[(n - 1)].posetilaca;
+            document.getElementById("tdatumivreme_n").innerHTML = dd[(n - 1)].datum +
+                " " + "у" + " " + dd[(n - 1)].vreme + " " + "сати";
+            document.getElementById("torganizator_n").innerHTML = dd[(n - 1)].organizator;
+            document.getElementById("topis_n").innerHTML = dd[(n - 1)].opis;
+
+            //ubacivanje slike u flajer
+            var za_sliku = dd[(n - 1)].vrsta;
+            console.log(za_sliku);
+            var s_f = document.getElementById("slika_flajer_n");
+            if (za_sliku == "Филмски класик") s_f.src = "img/kreiraj/klasik.jpg"
+            if (za_sliku == "Драма") s_f.src = "img/kreiraj/drama.jpg"
+            if (za_sliku == "SF") { s_f.src = "img/kreiraj/SF.jpg" }
+            if (za_sliku == "Хорор") { s_f.src = "img/kreiraj/horor.jpg" }
+            if (za_sliku == "Акциони") { s_f.src = "img/kreiraj/akcija.jpg" }
+            if (za_sliku == "Кримић") { s_f.src = "img/kreiraj/krimic.png" }
+
+            if (za_sliku == "Позоришна представа") { s_f.src = "img/kreiraj/predstava.jpg" }
+            if (za_sliku == "Балет") { s_f.src = "img/kreiraj/balet.jpg" }
+            if (za_sliku == "Опера") { s_f.src = "img/kreiraj/krimic.png" }
+            if (za_sliku == "Дечја представа") { s_f.src = "img/kreiraj/decja.jpg" }
+
+            if (za_sliku == "Концерт поп музике") { s_f.src = "img/kreiraj/pop.jpg" }
+            if (za_sliku == "Концерт рок музике") { s_f.src = "img/kreiraj/rock.jpg" }
+            if (za_sliku == "Концерт народне музике") { s_f.src = "img/kreiraj/narodna.jpg" }
+            if (za_sliku == "Концерт класичне музике") { s_f.src = "img/kreiraj/klasicna.jpg" }
+
+            if (za_sliku == "Ликовна уметност") { s_f.src = "img/kreiraj/likovna.jpg" }
+            if (za_sliku == "Примењена уметност") { s_f.src = "img/kreiraj/primenjena.jpg" }
+            if (za_sliku == "Изложба природе") { s_f.src = "img/kreiraj/priroda.jpg" }
+            if (za_sliku == "Историјска изложба") { s_f.src = "img/kreiraj/istorija.jpg" }
+            if (za_sliku == "Вајарство") { s_f.src = "img/kreiraj/vajarstvo.jpg" }
+        }
+
+
+        var mousePosition;
+        var offset = [-90,-40];
+        
+        var isDown = false;
+        var drag = document.getElementById("dugme_raniji");
+        drag.addEventListener('mousedown', function (e) {
+            isDown = true;
+            offset = [
+                drag.offsetLeft - e.clientX,
+                drag.offsetTop - e.clientY
+            ];
+        }, true);
+
+        document.addEventListener('mouseup', function () {
+            isDown = false;
+        }, true);
+
+        document.addEventListener('mousemove', function (event) {
+            event.preventDefault();
+            if (isDown) {
+                mousePosition = {
+
+                    x: event.clientX,
+                    y: event.clientY
+
+                };
+                drag.style.left = (mousePosition.x + offset[0]) + 'px';
+                drag.style.top = (mousePosition.y + offset[1]) + 'px';
+            }
+        }, true);
 
     </script>
 
