@@ -2,53 +2,305 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Beogradski muzeji</title>
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Borisav Bogdanovic">
+    <link rel="shortcut icon" href="img/bb.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="naslov">
-        <H1 class="naslov">NOVO POZORISTE SLOBODNI IZRAZ</H1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
+        <a class="navbar-brand text-white" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="https://www.danubeogradu.rs/rubrike/izlasci/umetnost/"
+                        target="_blank">Актуелно</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="https://www.nocmuzeja.rs/Gradovi/Beograd" target="_blank">Ноћ
+                        музеја 2019</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Београдски музеји</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" target="_blank" href="http://www.narodnimuzej.rs/">Народни музеј</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" target="_blank" href="https://etnografskimuzej.rs/">Етнографски
+                            музеј</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="http://imus.org.rs/" class="dropdown-item" target="_blank">Историјски музеј Србије</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" target="_blank" href="http://http://mpu.rs/">Музеј примењене
+                            уметности</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" target="_blank" href="http://www.msub.org.rs/">Музеј савремене
+                            уметности</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" target="_blank"
+                            href="http://www.crvenazvezdafk.com/scc/strana/12/muzej">Музеј фк Црвена звезда</a>
+                        <div class="dropdown-divider"></div>
 
-    </div>
-    <div class="cene">
-        <div class="karte">
-            <ul>Cene karata za redovni repertoar:
-                <li>Pre podne: 350din.</li>
-                <li>Posle podne: 450din</li>
-                <li>Vecernje predstave: 700din</li>
-                <ul>Povlascene cene karata:
-                    <li>Deca: 100din</li>
-                    <li>Studenti: 250din</li>
-                    <li>Penzioneri: 200din</li>
-                </ul>
-
-
+                    </div>
+                </li>
             </ul>
+
         </div>
-
+    </nav>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4 text-center font-weight-bold"
+                style='font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;'>Водич кроз Београдске музеје
+            </h1>
+        </div>
     </div>
-
-    <p id="pasusneki">Neki<a href=""> link </a> pasus</p>
-
-    <script>
-
-        var sadrzaj = document.getElementById("pasusneki").innerHTML;
-        console.log(sadrzaj);
-
-        var sadrzaj1 = document.getElementById("pasusneki").textContent;
-        console.log(sadrzaj1);
-
-        // function januarski_popust(){
-        //     alert("Dragi korisnici, \n obavestavamo Vas da ce cena karata u Januaru \n biti  snizena za 50%");
-        // }
-        // setTimeout(januarski_popust, 10000);
+    <section id="karusel" class="position-relative">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
 
 
-    </script>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/muz/karusel/Etnografski stalna postavka.jpg" class="d-block w-100" alt="etno">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Етнографски музеј</h5>
+                        <p>Стална поставка</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/muz/karusel/muzej Nikole Tesle.jpg" class="d-block w-100" alt="tesla">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Музеј Николе Тесле</h5>
+                        <p>"Стална поставка"</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/muz/karusel/Etnografski studenti.jpg" class="d-block w-100" alt="studenti">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Galerija Istorijskog arhiva Beograda</h5>
+                        <p>"Vekovi Beograda"</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/muz/karusel/Narodni muzej - stalna postava.jpg" class="d-block w-100" alt="Narodni">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Narodni Muzej</h5>
+                        <p>stalna postavka</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/muz/karusel/Izlozba fotografija.jpg" class="d-block w-100" alt="foto">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Галерија Дар-Мар</h5>
+                        <p>изложба фотографија</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/muz/karusel/Muzej-Ive-Andrica.jpg" class="d-block w-100" alt="Ivo Andric">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Музеј Иве Андрића</h5>
+                        <p>"Стална поставка"</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/muz/karusel/Vladislav Titelbah - cilimska radionica.jpg" class="d-block w-100"
+                        alt="Psi umiru sami">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Историјски музеј Србије</h5>
+                        <p>Владимир Тителбах - "Ћилимарска радионица"</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+    <br>
+    <section>
+        <div class="row media bg-dark" style="padding-left: 30px; padding-right: 50px; width: 100%;">
+            <img src="img/muz/narodni-muzej1.jpg" class="align-self-center mr-0 ml-0" alt="Narodni muzej">
+
+            <div class="media-body" style="padding: 25px;">
+                <h5 class="mt-0 text-white">Народни музеј</h5>
+
+                <p class="mb-0 text-white">Народни музеј основан је указом министра просвете Јована Стерије Поповића,
+                    10. маја 1844. године, као Музеум сербски, који је на једном месту требало да сабере старине и да их
+                    за потомство сачува. Организован у првим деценијама свог рада и као установа заштите и као научна,
+                    истраживачка установа, која је конституисала национални идентитет и била пресудан актер у развоју
+                    заштите баштине, Народни музеј је убрзо прерастао у званичног репрезента државе и друштва, сведочећи
+                    и о могућој снази културе и музеја у Србији.
+
+                    Интензивној делатност прикупљања и развоја збирки, придружен је убрзо и разноврстан истраживачки
+                    рад, који је преобразио Музеј од складишта прошлости у приказивачки, демонстрациони изложбени
+                    простор. Међуратне године двадесетог века довеле су до велике трансформације, у којој су изложбе,
+                    посебно међународне које су се динамично смењивале, уз разноврсну истраживачку и изузетну издавачку
+                    делатност, поставиле Музеј као центар информација о изузетном, о лепом, о посебним вредностима
+                    националне, али и европске културне баштине.</p>
+            </div>
+            <img src="img/muz/narodni-muzej2.jpg" class="align-self-center mr-0 ml-0" alt="Narodni muzej">
+        </div>
+        <hr class="mt-0 mb-0">
+        <div class="row media bg-dark" style="padding-left: 30px; padding-right: 50px; width: 100%;">
+            <img src="img/muz/avijacije1.jpg" class="align-self-center mr-0 ml-0" alt="Muzej avijacije">
+
+            <div class="media-body" style="padding: 25px;">
+                <h5 class="mt-0 text-white">Музеј авијације</h5>
+
+                <p class="mb-0 text-white">Овај мали али јединствени музеј налази се у непосредној близини Никола Тесла
+                    аеродрома у Београду, на око пет минута лаганог хода од главног терминала. Зграда има јединствен
+                    дизајн у стаклу а унутра се могу наћи разне занимљиве атракције и изложбе. Музеј поседује одличну
+                    колекцију летелица које су некада пропадале војсци, као и олупине америчких Ф-117 “Night Hawk” и
+                    Ф-16
+                    “Fighting Falcon” летелица које су оборене за време Нато бомбардовања 1999. године.
+                    Поред колекције летелица, музеј такође поседује велику колекцију уџбеника, докумената, фотографија,
+                    радара и пројектила као и разне аеронаутичке опреме и других артикала. Занимљива локација за
+                    посетити, не само за ентузијасте за авијацију већ и за било кога ко жели да научи нешто ново.
+                    Једна занимљивост везана за музеј је та да и даље чува први артифакт од кога је потекла читава
+                    његова колекција, а који је потекао са олупине једног од првих авиона који су икада летели у Србији
+                    1911. године. Непуних шест месеци пошто је Суботичанин Иван Сарић конструисао и летео првим авионом
+                    у Србији, пилот Едвард Русјан отиснуо се изнад Калемегданске тврђаве. Тог дана временски услови били
+                    су лоши и снажан ветар учинио је да се једно од крила распадне што је довело до рушења летелице и
+                    трагичне смрти њеног пилота.
+
+                </p>
+            </div>
+            <img src="img/muz/avijacije2.jpg" class="align-self-center mr-0 ml-0" alt="Muzej avijacije">
+        </div>
+        <hr class="mt-0 mb-0">
+        <div class="row media bg-dark" style="padding-left: 30px; padding-right: 50px; width: 100%;">
+            <img src="img/muz/vojni-muzej1.jpg" class="align-self-center mr-0 ml-0" alt="Muzej avijacije">
+
+            <div class="media-body" style="padding: 25px;">
+                <h5 class="mt-0 text-white">Војни музеј</h5>
+
+                <p class="mb-0 text-white">Овај музеј сматра се једном од локација које сваки посетиоц мора видети у
+                    Београду. Колекција је изузетно велика и покрива српску војну историју још од 7. века. Музеј се
+                    налази на Калеменгдану што га чини још погоднијим за посету. Првобитно га је изградио Милан
+                    Обреновић ИВ на предлог свог војног министра, као још један начин да се прослави новоосвојена
+                    независност Србије. Колекција оружја и других артифаката је екстензивна и укључује све типове од
+                    сабљи и средњевековног оклопа до тешке аљтилерије из Другог светског рата која је постављена на
+                    травњацима испред музеја. Музеј располаже и специјалном библиотеком са фондом од 15.000 наслова из
+                    области историје, историје уметности, археологије, музеологије, и других сродних грана науке, и са
+                    више од 6000 часописа.
+                </p>
+            </div>
+            <img src="img/muz/vojni-muzej2.jpg" class="align-self-center mr-3" alt="Muzej avijacije">
+        </div>
+        <hr class="mt-0 mb-0">
+        <div class="row media bg-dark" style="padding-left: 30px; padding-right: 50px; width: 100%;">
+            <img src="img/muz/msu1.jpg" class="align-self-center mr-0 ml-0" alt="MSU">
+
+            <div class="media-body" style="padding: 25px;">
+                <h5 class="mt-0 text-white">Музеј савремене уметности</h5>
+
+                <p class="mb-0 text-white">Од самог оснивања 1965. године, МСУБ је излагачку политику заснивао на
+                    представљању најзначајнијих уметника, раздобља, покрета и тенденција југословенске, српске и стране
+                    уметности 20. века. Такође, МСУБ је на европској и светској мапи модерне и савремене уметности
+                    стекао завидну репутацију која је отворила могућност интензивне међународне размене и сарадње са
+                    релевантним страним музејима, галеријама, колекцијама, кустосима и критичарима.
+                    Прилагођавајући се савременим музеолошким принципима заштите културног наслеђа и политикама
+                    излагања, МСУБ данас представља динамичну институцију која обимом и разноврсношћу својих програма,
+                    истраживачким и педагошким радом, интензивном међународном сарадњом и отвореношћу за различите
+                    облике културних активности и сарадње, представља важан чинилац уметничког и културног живота
+                    Београда и Србије.
+
+                </p>
+            </div>
+            <img src="img/muz/msu2.jpg" class="align-self-center mr-0 ml-0" alt="MSU">
+        </div>
+        <hr class="mt-0 mb-0">
+        <div class="row media bg-dark" style="padding-left: 30px; padding-right: 50px; width: 100%;">
+            <img src="img/muz/etnografski1.jpg" class="align-self-center mr-0 ml-0" alt="Etnografski muzej">
+
+            <div class="media-body" style="padding: 25px;">
+                <h5 class="mt-0 text-white">Етнографски музеј</h5>
+
+                <p class="mb-0 text-white">Етнографски музеј у Београду је основан 1901. издвајањем Етнографског одељења
+                    из оквира Народног музеја. Предлог и идејно-теоријску основу за стварање музеја у коме ће се
+                    изучавати народни живот саставио је историчар Стојан Новаковић, редовни члан Српског ученог друштва
+                    (данашња Српска академија наука и уметности). Разноврсни етнографски предмети међу којима је било
+                    земљаног и металног посуђа, накита, амајлија, предмета од стакла и текстила, оружја, алата, ускршњих
+                    јаја и осталих музеалија пренесени су у Задужбину Стевче Михајловића – кућу коју је Михајловић
+                    тестаментом завештао ,,народу србском за вечити спомен моији и то у тоји целји да се од ње начини
+                    музеј за Краљевину србску“.
+                    Етнографском музеју у Београду се организују повремене и сталне изложбе. До данас је приређено осам
+                    сталних изложби и више стотина повремених изложби у земљи и иностранству. Осма стална изложба је
+                    постављена 2001. под називом ,,Народна култура Срба у ХIХ и ХХ веку“. Редовни програм Музеја од
+                    1992. године чини и Међународни фестивал етнолошког филма. У Музеју се организују радионице за децу
+                    и одрасле, предавања, представљања књига и концерти.
+                </p>
+            </div>
+            <img src="img/muz/etnografski2.jpg" class="align-self-center mr-0 ml-0" alt="Etnografski muzej">
+        </div>
+        <hr class="mt-0 mb-0">
+        <div class="row media bg-dark" style="padding-left: 30px; padding-right: 50px; width: 100%;">
+            <img src="img/muz/mpu1.jpg" class="align-self-center mr-0 ml-0" alt="JDP">
+
+            <div class="media-body" style="padding: 25px;">
+                <h5 class="mt-0 text-white">Музеј примењене уметности</h5>
+
+                <p class="mb-0 text-white">Музеј примењене уметности основан је 6. новембра 1950. године и припада
+                    категорији уметничких музеја специјализованог типа. Основна делатност Музеја је да систематски
+                    прикупља, штити, чува, проучава, излаже и публикује предмете примењене уметности. Поред дела
+                    националне примењене уметности, у Музеју се прикупља истородни материјал из других европских и
+                    ваневропских земаља, који је преко културних и привредних веза доспео у наше крајеве.
+                    Mузеј има веома живу изложбену активност, као и сопствену издавачку делатност. Традиционалне
+                    музејске манифестације су Салон архитектуре, Дечји салон примењене уметности, Салон савремене
+                    примењене уметности и Тријенале керамике. Сваког шестог новембра, на дан оснивања Музеја, приређује
+                    се студијска изложба, која приказује до тада неистражено подручје примењене уметности код Срба.
+                    Музеј има надлежност на целој територији Републике Србије за предмете примењене уметности.
+                </p>
+            </div>
+            <img src="img/muz/mpu2.jpg" class="align-self-center mr-0 ml-0" alt="JDP">
+        </div>
+        <br>
+    </section>
+    <footer>
+            <div class="row">
+                    <div class="col-sm-6">
+                        <a href="#top" class="ml-5">Idi na vrh</a>
+                    </div>
+                    <div class="col-sm-6">
+                        <span class="ml-5">&copy; Борисав Богдановић 2018</span>
+                        <img class="mr-5 ml-3" src="img/bb-logo.png" alt="logo">
+                    </div>
+                </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+
 </body>
 
 </html>
