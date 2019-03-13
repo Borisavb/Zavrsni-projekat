@@ -2,14 +2,19 @@
     box-sizing: border-box;
 }
 
+body{
+    background-image: url("../img/clouds.jpg");
+    
+}
+
 #container {
     
     display: grid;
-    height: 950px;
+    height: auto;
     width: 100%;
     
     grid-template-columns: 66.6% auto;  
-    grid-template-rows: 12% 5% auto 4%;  
+    grid-template-rows: 13% 5% auto 5%;  
     /* grid-column-gap: 5px;
     grid-row-gap: 5px; */
     grid-template-areas:
@@ -18,24 +23,19 @@
         "main aside"
         "footer footer";
     /* border: 1px solid black; */
-    background-image: url(../img/clouds.jpg);   
+       
     overflow-wrap: break-word;
     overflow: hidden;
     
 }
 
-@media (max-width: 938px){
+@media (max-width: 940px){
     #container{
         display: flex;        
         flex-direction: column;
         
-        height: 1600px;
-        /* grid-template-areas:
-        "naslov"
-        "navbar"
-        "main"
-        "aside"
-        "footer"; */
+        height: auto;
+       
     }    
     #main{
         height: auto;
@@ -45,8 +45,7 @@
         align-items: center;
         justify-content: space-around;
     }    
-       
-         
+             
 }
 
 @media (max-width: 640px){
@@ -54,13 +53,8 @@
         display: flex;
         
         flex-direction: column;
-        height: 2000px;
-        /* grid-template-areas:
-        "naslov"
-        "navbar"
-        "main"
-        "aside"
-        "footer"; */
+        height: auto;
+        
     }
     #main{
         height: 1850px;
@@ -74,21 +68,26 @@
 
 #naslov {
     grid-area: naslov;
-    font-size: xx-large;
+    font-size:3vw;
     text-align: center;
 }
+
 #naslov h3 {
     
     align-self: center;
     text-shadow: 4px 4px 8px grey;
-    top: 0;
+    top: 20px;
     left: 20%;
+    
     /* margin-left: 200px; */
 }
 
 #animacija img{
-    opacity: 0.3;
+    opacity: 0.4;
     border-radius: 50%;
+    width: 105px;
+    height: auto;
+    
 }
 
 #animacija{
@@ -96,7 +95,7 @@
     animation-duration: 10s;
     animation-delay: 5s;
     animation-direction: alternate;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 3;
     animation-timing-function: ease-in-out;
     position: absolute;
     left: 4;
@@ -104,8 +103,8 @@
 }
 
 @keyframes anima{
-    0% {left:4px; transform: rotate(0deg);}
-    100% {left: 1140px; transform: rotate(1120deg);}
+    0% {left:8px; transform: rotate(0deg);}
+    100% {left: 1150px; transform: rotate(1120deg);}
     /* 100% {left:0px; transform: rotate(0deg);} */
 }
 
@@ -167,16 +166,20 @@
 #main img {
     
     /* width: 100%;
-    height: 100%;    */
+    height: auto;    */
     box-shadow: 12px 9px 4px #666;
     opacity: 1;
+    
+    transition: all 0.4s;
+    
    
 }
 
 #main img:hover {
-    opacity: 0.85;
-    box-shadow: 14px 11px 4px #888;
-    zoom: 1.02;
+    opacity: 0.9;
+    box-shadow: 30px 18px 5px #888;
+    transform: scale(1.1);
+
 
 }
 
@@ -195,6 +198,7 @@
     width: 100%;
     align-items: center;
     justify-content: space-around;
+    margin-top: 30px;
     
 }
 #footer {
@@ -208,6 +212,7 @@
 #footer img { 
     position: relative;
     border-radius: 50%;
+    margin-top: 8px;
     margin-left: 80px;
     bottom: 10px;
     transition-property: transform;
@@ -221,6 +226,5 @@
 #footer span{
     position: relative;
     bottom: 20px;
-    left: 100px;
+    left: 50px;
 }
-
