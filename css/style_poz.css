@@ -1,81 +1,13 @@
-h1 {
-    align-content: center;
-    align-self: center;
-        color: white;
-    font-size: 70px;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    grid-area: h1;
-    text-shadow: 4px 4px 10px #FF0000;
-
-}
-
-#naslov {
-    display: grid;
-    grid-area: naslov;  
-   
-    grid-template-areas: "h1";
-     
-    background-image: url("../img/scena.jpg");
+img{
+    box-shadow: 12px 9px 4px #666;
+    opacity: 0.9;
     
+    transition: all 0.4s;
+}
+
+img:hover{
+    box-shadow: 22px 14px 5px #666;
+    opacity: 1;
     
-}
-
-#repertoar {
-    grid-area: repertoar;
-    margin: 0;
-    padding: 0px;
-    width: 100%;
-    height: 600px;    
-    background-color: lightskyblue;
-
-}
-
-#cenovnik {
-    grid-area: cenovnik;
-    width: 100%;
-    height: 600px;
-    background-color: lightpink;      
-    font-size: 22px;
-    color: rgb(51, 50, 50);
-    text-shadow: 3px 3px 8px rgb(70, 69, 69);
-}
-
-#kontejner { 
-    display: grid;
-    grid-gap: 3px;
-    grid-template-columns: 15% 65% 20%;
-    grid-template-rows: 25%px 5% auto 5%;
-    grid-template-areas: 
-                        "naslov naslov naslov"
-                        "navbar navbar navbar"
-                        "repertoar repertoar cenovnik"
-                        "footer footer footer";
-}    
-
-#navbar {
-    grid-area: navbar;
-    background-color: lightgrey;
-}
-
-#footer {
-    grid-area: footer;
-    background-color: lightgray;
-}
-
-.tabela { background-color: lightsalmon;
-        color:black;
-        border-color: lightgoldenrodyellow;
-        margin-left: 35%;
-        
-
-}
-tr {
-    width: 10%;
-
-}
-td {
-    width: 10%;
-    padding: 5px 30px;
-    text-align: center;
+    transform: scale(1.1);
 }
