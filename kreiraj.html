@@ -16,7 +16,6 @@
             <form id="formular" onsubmit="return validacija()">
                 <fieldset>
                     <legend><b> Креирајте сами свој културни догађај </b></legend>
-
                     <label for="vrsta">Врста догађаја: </label><br>
                     <select name="vrsta" id="vrsta">
                         <option label=" "></option>
@@ -49,14 +48,12 @@
                         </optgroup>
                     </select>
                     <br>
-                    
                     <label for="dugme"></label><br>
                     <input type="button" id="dugme" value="Изаберите локацију" onclick="lokacija()">
                     <span id="za_lok">Притисните дугме за избор локације</span>
                     <select name="lok" id="lok">
 
                     </select>
-                    
                     <br><br>
                     <label for="naziv_dogadjaja">Назив догађаја: </label><br>
                     <input type="text" id="naziv_dogadjaja" name="naziv">
@@ -84,7 +81,6 @@
                     <input type="submit" value="Пошаљи"><br>
                     <p id="greska"></p>
                 </fieldset>
-
             </form>
             <button id="dugme_flajer" onclick="(otvori_flajer())">КРЕИРАЈТЕ ДОГАЂАЈ</button>
         </div>
@@ -124,7 +120,11 @@
             </div>
         </div>
         <br>
-        <button id="dugme_raniji" onclick="(prethodni_dogadjaji())">ПРЕГЛЕД ПРЕТХОДНИХ ДОГАЂАЈА</button>
+        <button id="dugme_raniji" onclick="(prethodni_dogadjaji())">ОДАБЕРИТЕ РАНИЈИ ДОГАЂАЈ</button>
+        <button id="dugme_svi_raniji" onclick='window.location = "dogadjaji.html"'>
+            ПРЕГЛЕД СВИХ РАНИЈИХ ДОГАЂАЈА</button>
+        <button id="dugme_pocetna" onclick='window.location = "index.html"'>ПОЧЕТНА</button>
+        <button id="dugme_ponovo" onclick='window.location = "kreiraj.html"'>КРЕИРАЈТЕ НОВИ ДОГАЂАЈ</button>
         <div id="flajer_n">
             <table id="tabela_n">
                 <tr>
@@ -157,16 +157,10 @@
                 </tr>
             </table>
             <div id="container_img_n">
-                <img id="slika_flajer_n" src="img/kreiraj/Дечја представа.jpg" alt="decja">
+                <img id="slika_flajer_n" src="img/kreiraj/Балет.jpg" alt="балет">
             </div>
         </div>
-
     </div>
-    <!-- <div id="animacija">
-        <div id="krug">
-            <img src="img/bb.png" alt="bb">
-        </div>
-    </div> -->
 
     <script>
 
@@ -174,21 +168,24 @@
         var dogadjaji = [];
         var dogadjaj = {}
         var lokacije = {
-            "film": ["", "Дворана Културног Центра", "Cineplexx - Delta City", "Академија 28", "Биоскоп Фонтана", "Кинотека"],
-            "predstave": ["", "Народно Позориште", "Београдско Драмско Позориште", "Југословенско Драмско Позориште",
-                "Позориште на Теразијама", "Звездара Театар", "Позориште Бошко Буха", "Позориштанце Пуж"],
+            "film": ["", "Дворана Културног Центра", "Cineplexx - Delta City",
+                "Академија 28", "Биоскоп Фонтана", "Кинотека"],
+            "predstave": ["", "Народно Позориште", "Београдско Драмско Позориште",
+                "Југословенско Драмско Позориште", "Позориште на Теразијама",
+                "Звездара Театар", "Позориште Бошко Буха", "Позориштанце Пуж"],
             "muzej": ["", "Народни музеј", "Музеј примењене уметности", "Природњачки музеј",
                 "Историјски музеј Србије", "Музеј града Београда"],
-            "koncert": ["", "Београдска Арена", "Сава Центар", "Дом Синдиката", "Коларац", "Студентски Културни Центар"]
+            "koncert": ["", "Београдска Арена", "Сава Центар", "Дом Синдиката", "Коларац",
+                "Студентски Културни Центар"]
         };
 
         document.getElementById("vrsta").addEventListener("change", obavestenje);
-        function obavestenje(){
-            document.getElementById("za_lok").style.visibility ="visible";
+        function obavestenje() {
+            document.getElementById("za_lok").style.visibility = "visible";
         }
         document.getElementById("dugme").addEventListener("click", obavestenje2);
-        function obavestenje2(){
-            document.getElementById("za_lok").style.visibility ="hidden";
+        function obavestenje2() {
+            document.getElementById("za_lok").style.visibility = "hidden";
         }
 
         //ponuda lokacije na osnovu odabira vrste dogadjaja
@@ -207,9 +204,6 @@
                 popuni.appendChild(opcija);
             }
         }
-
-
-
 
         function odabran_dogadjaj() {
             var dog = document.getElementById("vrsta");
@@ -246,14 +240,13 @@
             return true;
         }
 
-
-
         function dohvati() {
             var za_dohvatanje = localStorage.getItem("dogadjaji");
             var p = JSON.parse(za_dohvatanje);
             console.log(p);
             return p;
         }
+
         function smesti_dogadjaj(dogadjaj) {
             dohvaceni = false;
             var p = dohvati();
@@ -274,7 +267,6 @@
 
             return false;
         }
-
 
         function ispravan_broj_posetilaca() {
             var posetilaca = document.getElementById("broj_posetilaca").value;
@@ -344,7 +336,6 @@
                 get.getElementById("dugme_flajer").style.display = "inline-block";
                 greska.innerHTML = "Унесите опис догађаја";
 
-
                 return true;
             }
             return false;
@@ -353,19 +344,26 @@
         function otvori_flajer() {
             var f = document.getElementById("flajer");
             f.style.display = "inline-block";
-            f.style.backgroundImage = `url("img/fback${Math.ceil(Math.random()*16)}.jpg")`;   // file:///D:frontend/!Zavrsni projekat/
-       
-        //popunjavanje tabele flajera!
-                  
+            f.style.backgroundImage = `url("..img/kreiraj/back/fback${Math.ceil(Math.random() * 16)}.jpg")`;
+
+            //popunjavanje tabele flajera!
+
             var dr = document.getElementById("dugme_raniji");
             dr.style.display = "block";
-            document.getElementById("forma").style.display = "none";            
+            var dr1 = document.getElementById("dugme_svi_raniji");
+            dr1.style.display = "block";
+            var dr2 = document.getElementById("dugme_pocetna");
+            dr2.style.display = "block";
+            var dr3 = document.getElementById("dugme_ponovo");
+            dr3.style.display = "block";
+
+            document.getElementById("forma").style.display = "none";
             var dohvati_dogadjaj = localStorage.getItem("dogadjaji");
             var dd = JSON.parse(dohvati_dogadjaj);
             console.log(dd);
             console.log((dd.length - 1));
             console.log(dd[(dd.length - 1)].vrsta);
-                        
+
             if (dd[(dd.length - 1)].klasa == "film") {
                 document.getElementById("tvrsta").innerHTML = "Филм жанра:" + " " + dd[(dd.length - 1)].vrsta;
             }
@@ -386,46 +384,50 @@
             //ubacivanje slike u flajer
 
             var za_sliku = dd[(dd.length - 1)].vrsta;
-            
+
             var s_f = document.getElementById("slika_flajer");
-            
+
             s_f.src = `img/kreiraj/${za_sliku}.jpg`
 
-            
 
-            
+
+
         }
-        function prethodni_dogadjaji(){
-            var n = prompt("Unesite redni broj dogadjaja:");
+        function prethodni_dogadjaji() {
+            var n = prompt("Унестите редни број догађаја:");
 
             var fn = document.getElementById("flajer_n");
             fn.style.display = "inline-block";
-            fn.style.backgroundImage = `url("img/fback${Math.ceil(Math.random()*16)}.jpg")`;    // file:///D:frontend/!Zavrsni projekat/
+            fn.style.backgroundImage = `url("img/kreiraj/back/fback${Math.ceil(Math.random() * 16)}.jpg")`;
             var dohvati_dogadjaj = localStorage.getItem("dogadjaji");
             var dd = JSON.parse(dohvati_dogadjaj);
-            
+
             document.getElementById("tvrsta_n").innerHTML = "";
-            setTimeout(function() {if (dd[(n - 1)].klasa == "koncert") {
-                document.getElementById("tvrsta_n").innerHTML = "Концерт" + " " + dd[(n - 1)].vrsta;
-            }
-            else if (dd[(n - 1)].klasa == "film") {
-                document.getElementById("tvrsta_n").innerHTML = "Филм жанра:" + " " + dd[(n - 1)].vrsta;
-            }
-            else
-                document.getElementById("tvrsta_n").innerHTML = dd[(n - 1)].vrsta;}, 1000);
+            setTimeout(function () {
+                if (dd[(n - 1)].klasa == "koncert") {
+                    document.getElementById("tvrsta_n").innerHTML = "Концерт" + " " + dd[(n - 1)].vrsta;
+                }
+                else if (dd[(n - 1)].klasa == "film") {
+                    document.getElementById("tvrsta_n").innerHTML = "Филм жанра:" + " " + dd[(n - 1)].vrsta;
+                }
+                else
+                    document.getElementById("tvrsta_n").innerHTML = dd[(n - 1)].vrsta;
+            }, 1000);
             document.getElementById("tnaziv_n").innerHTML = "";
-            setTimeout(function() {document.getElementById("tnaziv_n").innerHTML = '"' + dd[(n - 1)].naziv + '"';}, 2000);
+            setTimeout(function () { document.getElementById("tnaziv_n").innerHTML = '"' + dd[(n - 1)].naziv + '"'; }, 2000);
             document.getElementById("tlokacija_n").innerHTML = "";
-            setTimeout(function() {document.getElementById("tlokacija_n").innerHTML = dd[(n - 1)].lokacija;}, 3000);
+            setTimeout(function () { document.getElementById("tlokacija_n").innerHTML = dd[(n - 1)].lokacija; }, 3000);
             document.getElementById("tposetilaca_n").innerHTML = "";
-            setTimeout(function() {document.getElementById("tposetilaca_n").innerHTML = dd[(n - 1)].posetilaca;}, 4000);
+            setTimeout(function () { document.getElementById("tposetilaca_n").innerHTML = dd[(n - 1)].posetilaca; }, 4000);
             document.getElementById("tdatumivreme_n").innerHTML = "";
-            setTimeout(function() {document.getElementById("tdatumivreme_n").innerHTML = dd[(n - 1)].datum +
-                " " + "у" + " " + dd[(n - 1)].vreme + " " + "сати";}, 5000);
-            document.getElementById("torganizator_n").innerHTML = "";    
-            setTimeout(function() {document.getElementById("torganizator_n").innerHTML = dd[(n - 1)].organizator;}, 6000);
+            setTimeout(function () {
+                document.getElementById("tdatumivreme_n").innerHTML = dd[(n - 1)].datum +
+                    " " + "у" + " " + dd[(n - 1)].vreme + " " + "сати";
+            }, 5000);
+            document.getElementById("torganizator_n").innerHTML = "";
+            setTimeout(function () { document.getElementById("torganizator_n").innerHTML = dd[(n - 1)].organizator; }, 6000);
             document.getElementById("topis_n").innerHTML = ""
-            setTimeout(function() {document.getElementById("topis_n").innerHTML = dd[(n - 1)].opis;}, 7000);
+            setTimeout(function () { document.getElementById("topis_n").innerHTML = dd[(n - 1)].opis; }, 7000);
 
             //ubacivanje slike u flajer
 
@@ -438,8 +440,8 @@
 
         //dugme setanje!
         var mousePosition;
-        var offset = [-90,-40];
-        
+        var offset = [-90, -40];
+
         var isDown = false;
         var drag = document.getElementById("dugme_raniji");
         drag.addEventListener('mousedown', function (e) {

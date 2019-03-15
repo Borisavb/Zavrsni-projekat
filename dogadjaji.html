@@ -13,7 +13,6 @@
 <body>
     <div id="container">
 
-
     </div>
 
     <script>
@@ -107,29 +106,25 @@
 
         }
 
-        
-        for (i = 0; i<(dd.length); i++) {
+        for (i = 0; i < (dd.length); i++) {
             pravi_tabelu();
             console.log(kont);
 
             var f = document.getElementsByClassName("flajer");
-
-            f[i].style.backgroundImage = `url("img/fback${Math.ceil(Math.random() * 16)}.jpg")`;
+            f[i].style.backgroundImage = `url("img/kreiraj/back/fback${Math.ceil(Math.random() * 16)}.jpg")`;
 
             var tvrsta = document.getElementsByClassName("tvrsta");
             if (dd[i].klasa == "film") {
-                
                 tvrsta[i].innerHTML = "Филм жанра:" + " " + dd[i].vrsta;
             }
             else if (dd[i].klasa == "koncert") {
                 tvrsta[i].innerHTML = "Концерт:" + " " + dd[i].vrsta;
             }
             else
-
                 tvrsta[i].innerHTML = dd[i].vrsta;
 
             var tnaziv = document.getElementsByClassName("tnaziv");
-            
+
             tnaziv[i].innerHTML = '"' + dd[i].naziv + '"';
             var tlokacija = document.getElementsByClassName("tlokacija");
             tlokacija[i].innerHTML = dd[i].lokacija;
@@ -148,15 +143,10 @@
             var za_sliku = dd[i].vrsta;
             console.log("slika:" + " " + za_sliku);
             var s_f = document.getElementsByClassName("slika_flajer");
-
             s_f[i].src = `img/kreiraj/${za_sliku}.jpg`;
-
         }
 
         console.log(kont);
-
-
-
 
     </script>
 
