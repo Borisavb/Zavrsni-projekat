@@ -11,15 +11,10 @@ body{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
- 
   background-repeat: no-repeat;
   height: auto; 
   overflow-wrap: break-word;
-
   height: auto;
-  
-
-  
   padding:0;
   margin:0;
   width: 100%;
@@ -32,12 +27,10 @@ body{
   height: 100px;
 }  
 
-
 .flajer{
   
   width: 450px;
   height: 100%;
-  
   background-image: url("../img/fback12.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -49,9 +42,6 @@ body{
   margin: 30px;
 
 }
-
-
-
 
 #container_img{
   position: relative;
@@ -68,13 +58,10 @@ body{
   box-shadow: 7px 7px 6px rgb(77, 72, 72);
   border: 1px solid black;
 }  
-  
-
+ 
 .tabela{
-  width: 100%;
-  
+  width: 100%;  
 }
-
 
 .tabela tr td{
   padding: 12px 15px;
