@@ -11,19 +11,14 @@ body{
     
     display: grid;
     height: auto;
-    width: 100%;
-    
+    width: 100%;    
     grid-template-columns: 66.6% auto;  
     grid-template-rows: 13% 5% auto 5%;  
-    /* grid-column-gap: 5px;
-    grid-row-gap: 5px; */
     grid-template-areas:
         "naslov naslov"
         "navbar navbar"
         "main aside"
-        "footer footer";
-    /* border: 1px solid black; */
-       
+        "footer footer";           
     overflow-wrap: break-word;
     overflow: hidden;
     
@@ -33,13 +28,13 @@ body{
     #container{
         display: flex;        
         flex-direction: column;
-        
         height: auto;
-       
     }    
+    
     #main{
         height: auto;
     }
+    
     #aside{
         height: 1000px;
         align-items: center;
@@ -50,15 +45,15 @@ body{
 
 @media (max-width: 640px){
     #container{
-        display: flex;
-        
+        display: flex;        
         flex-direction: column;
-        height: auto;
-        
+        height: auto;        
     }
+
     #main{
         height: 1850px;
     }
+
     #aside{
         height: 900px;
         align-items: center;
@@ -78,8 +73,6 @@ body{
     text-shadow: 4px 4px 8px grey;
     top: 20px;
     left: 20%;
-    
-    /* margin-left: 200px; */
 }
 
 #animacija img{
@@ -98,23 +91,17 @@ body{
     animation-iteration-count: 3;
     animation-timing-function: ease-in-out;
     position: absolute;
-    left: 4;
-    
+    left: 4px;
 }
 
 @keyframes anima{
     0% {left:8px; transform: rotate(0deg);}
     100% {left: 1150px; transform: rotate(1120deg);}
-    /* 100% {left:0px; transform: rotate(0deg);} */
 }
-
-
 
 #navbar {
     grid-area: navbar;
-    /* background-color: rgb(197, 208, 219); */
     opacity: 0.7; 
-    
 }
 
 #navbar ul{
@@ -147,40 +134,22 @@ body{
     grid-area: main;
     display: flex;
     flex-wrap: wrap;
-/*     
-    grid-template-rows: 42% 42% auto;
-    grid-template-columns: 50% 50%; 
-    grid-template-areas:
-        "karta1 karta2"
-        "karta3 karta4"
-        "vesti vesti"; */
-    
-    /* height: auto; */
+
     width: 100%;
     justify-content: space-around;
     align-items: center;
 }
 
-
-
-#main img {
-    
-    /* width: 100%;
-    height: auto;    */
-    box-shadow: 12px 9px 4px #666;
+#main img {    
+    box-shadow: 12px 9px 4px #777;
     opacity: 1;
-    
     transition: all 0.4s;
-    
-   
 }
 
 #main img:hover {
     opacity: 0.9;
     box-shadow: 30px 18px 5px #888;
     transform: scale(1.1);
-
-
 }
 
 .karta p{
@@ -194,7 +163,6 @@ body{
     grid-area: aside;
     display: flex;
     flex-direction: column;
-    /* border: 1px solid red; */
     width: 100%;
     align-items: center;
     justify-content: space-around;
@@ -204,11 +172,8 @@ body{
 #footer {
     grid-area: footer;    
     width: 100%;
-    
-    
-   
-    
 }
+
 #footer img { 
     position: relative;
     border-radius: 50%;
@@ -221,7 +186,7 @@ body{
 
 #footer img:hover {
     transform: rotate(1000deg);
-  }
+}
 
 #footer span{
     position: relative;
